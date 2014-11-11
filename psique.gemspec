@@ -14,10 +14,13 @@ Gem::Specification.new do |s|
   s.description = "Style Guide in sass/compass ready for Emergia's apps Rails."
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
-  s.test_files = Dir['test/**/*']
+  s.files       = `git ls-files`.split($RS)
+  s.test_files  = Dir['test/**/*']
 
-  s.add_dependency 'rails', '~> 4.1.7'
+  s.add_development_dependency 'rails'
+  s.add_development_dependency 'sprockets'
   s.add_development_dependency 'sqlite3'
-  s.add_runtime_dependency 'sass'
+
+  s.add_dependency 'sass-rails'
+  s.add_dependency 'compass-rails'
 end
