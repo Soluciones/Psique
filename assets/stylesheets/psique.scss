@@ -2,3 +2,9 @@
 @import 'compass';
 @import 'breakpoint';
 @import 'susy';
+
+// Settings and mixins
+@import 'psique/settings';
+
+// Basic and core elements
+@import 'psique/grid';
