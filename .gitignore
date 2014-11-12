@@ -1,5 +1,7 @@
 *.gem
 *.rbc
+*.ruby-version
+*.ruby-gemset
 doc/
 rdoc/
 .bundle/
