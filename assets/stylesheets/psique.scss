@@ -1,3 +1,11 @@
-// Vendors
+// Reset and vendors
 @import 'compass';
+@import 'breakpoint';
 @import 'susy';
+
+// Settings and mixins
+@import 'psique/settings';
+@import 'psique/mixins';
+
+// Basic and core elements
+@import 'psique/grid';
