@@ -8,15 +8,9 @@
 }
 
 // Create mobile first grid system
-@for $i from 1 through susy-get(columns) {
-  .col-sm-#{$i} { @include span($i); }
-}
+@include make-grid('sm');
 
 // Create desktop grid system
-@for $i from 1 through susy-get(columns) {
-  .col-lg-#{$i} {
-    @include breakpoint($screen-mobile) {
-      @include span($i);
-    }
-  }
+@include breakpoint($screen-mobile) {
+  @include make-grid('lg');
 }
