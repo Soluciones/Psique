@@ -8,3 +8,25 @@
     }
   }
 }
+
+// Generate bottom arrow to header panels
+@mixin arrow($size, $color, $offset) {
+  position: relative;
+
+  &:after {
+    @include output-rhythm(border-width, $size);
+    @include output-rhythm(bottom, -1.8 * $size);
+    border: {
+      color: transparent;
+      style: solid;
+      top-color: $color;
+    }
+    content: '';
+    height: 0;
+    left: $offset;
+    pointer-events: none;
+    position: absolute;
+    visibility: visible;
+    width: 0;
+  }
+}
