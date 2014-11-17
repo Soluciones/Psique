@@ -3,7 +3,7 @@
 
 $screen-desktop: 1200px !default;
 $screen-mobile: 768px !default;
-$layout-desktop: $screen-desktop static;
+$layout-desktop: $screen-desktop static !default;
 
 
 // Susy grid global defaults
@@ -37,7 +37,35 @@ $susy: (
 );
 
 
-// Typography
+// Compass Vertical Rhythm Settings
 // -------------------------------------------------
 
+@include establish-baseline; // Establishes baseline with Compass.
+$base-font-size: 16px !default;
+$base-line-height: 24px !default;
+$round-to-nearest-half-line: true !default;
 $rhythm-unit: 'rem';
+
+
+// Colors
+// -------------------------------------------------
+
+$well-read: #ab3132 !default;
+$verdun-green: #426e00 !default;
+$hollywood-cerise: #c000a6 !default;
+$casper: #afc6d4 !default;
+$trinidad: #e85900 !default;
+$white: #fff !default;
+$black: #000 !default;
+
+
+// Panels
+// -------------------------------------------------
+
+$panel-colors: (
+  'red': $well-read,
+  'green': $verdun-green,
+  'pink': $hollywood-cerise,
+  'orange': $trinidad,
+  'light-blue': $casper
+);
