@@ -30,3 +30,34 @@
     width: 0;
   }
 }
+
+// Generate panel
+@mixin panel($header-bg-color, $header-text-color, $content-bg-color: transparent, $content-border-color: transparent, $padding: 1rem) {
+  @include trailer(1);
+
+  .panel-header {
+    @include output-rhythm(padding, $padding);
+    background-color: $header-bg-color;
+    color: $header-text-color;
+    font-weight: bold;
+
+    &.arrow {
+      @include arrow(rhythm(.4), $header-bg-color, rhythm(4));
+    }
+
+    &.border-bottom {
+      @include output-rhythm(border-bottom, rhythm(.4));
+      border-bottom: {
+        color: adjust-color($header-bg-color, $hue: -2, $saturation: 48%, $lightness: -38%);
+        style: solid;
+      }
+    }
+  }
+
+  .panel-content {
+    @include output-rhythm(padding, $padding);
+    background-color: $content-bg-color;
+    border: 1px solid $content-border-color;
+    border-top: 0;
+  }
+}
