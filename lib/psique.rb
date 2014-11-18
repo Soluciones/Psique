@@ -1,5 +1,6 @@
 require 'sass-rails'
 require 'compass-rails'
+require 'normalize-scss'
 require 'breakpoint'
 require 'susy'
 require 'psique/engine'

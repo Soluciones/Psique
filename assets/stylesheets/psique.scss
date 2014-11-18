@@ -1,4 +1,5 @@
 // Reset and vendors
+@import 'normalize';
 @import 'compass';
 @import 'breakpoint';
 @import 'susy';
@@ -9,3 +10,4 @@
 
 // Basic and core elements
 @import 'psique/grid';
+@import 'psique/panels';

@@ -8,6 +8,7 @@ rdoc/
 log/*.log
 pkg/
 Gemfile.lock
+Guardfile
 test/dummy/db/*.sqlite3
 test/dummy/db/*.sqlite3-journal
 test/dummy/log/*.log

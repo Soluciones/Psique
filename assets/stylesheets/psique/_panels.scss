@@ -1,0 +1,7 @@
+.panel {
+  @include panel(map-get($panel-colors, 'light-blue'), $black, $content-border-color: #ccc);
+
+  @each $panel-type, $panel-color in map-remove($panel-colors, 'light-blue') {
+    &.#{$panel-type} { @include panel($panel-color, $white, #f4f4f6); }
+  }
+}
