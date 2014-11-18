@@ -40,23 +40,35 @@ $susy: (
 // Compass Vertical Rhythm Settings
 // -------------------------------------------------
 
-@include establish-baseline; // Establishes baseline with Compass.
-$base-font-size: 16px !default;
-$base-line-height: 24px !default;
-$round-to-nearest-half-line: true !default;
+$round-to-nearest-half-line: true;
 $rhythm-unit: 'rem';
 
 
 // Colors
 // -------------------------------------------------
 
-$well-read: #ab3132 !default;
-$verdun-green: #426e00 !default;
-$hollywood-cerise: #c000a6 !default;
-$casper: #afc6d4 !default;
-$trinidad: #e85900 !default;
-$white: #fff !default;
+$astronaut: #034665 !default;
 $black: #000 !default;
+$casper: #afc6d4 !default;
+$hollywood-cerise: #c000a6 !default;
+$trinidad: #e85900 !default;
+$verdun-green: #426e00 !default;
+$well-read: #ab3132 !default;
+$white: #fff !default;
+
+
+// Typography
+// -------------------------------------------------
+
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 12px;
+
+$headings-color: $astronaut;
+$headings-font-weight: normal;
 
 
 // Panels
