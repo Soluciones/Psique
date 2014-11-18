@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sprockets', '~> 2.11.0'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rails-assets-holderjs'
+  s.add_development_dependency 'hologram'
 
   s.add_dependency 'sass-rails'
   s.add_dependency 'compass-rails'
