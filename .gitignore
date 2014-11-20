@@ -3,7 +3,7 @@
 *.ruby-version
 *.ruby-gemset
 .bundle/
-log/*.log
+log/
 pkg/
 Gemfile.lock
 Guardfile

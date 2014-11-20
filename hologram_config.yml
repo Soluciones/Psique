@@ -5,12 +5,12 @@
 source: ./assets
 
 # The directory that hologram will build to
-destination: ./public/styleguide
+destination: ./doc/public/styleguide
 
 # The assets needed to build the docs (includes header.html,
 # footer.html, etc)
 # You may put doc related assets here too: images, css, etc.
-documentation_assets: ./doc
+documentation_assets: ./doc/assets
 
 # Any other asset folders that need to be copied to the destination
 # folder. Typically this will include the css that you are trying to
