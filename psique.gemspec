@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'normalize-scss', '~> 3.0.2'
   s.add_dependency 'breakpoint', '~> 2.5.0'
   s.add_dependency 'susy', '~> 2.1.3'
+  s.add_dependency 'haml', '~> 4.0.5'
 end
