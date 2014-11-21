@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>My Style Guide core</title>
+    <link rel="shortcut icon" href="./brick.png" />
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./styleguide/css/doc.css">
+    <link rel="stylesheet" href="./styleguide/css/github.css">
+    <link rel="stylesheet" href="./styleguide/css/screen.css">
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="./assets/psique.scss">
+
+    <!-- Main libraries -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.4.1/holder.js"></script>
+    <script src="./styleguide/script/components.js"></script>
+  </head>
+
+  <body>
+    <header class="header pbn" role="banner">
+      <div class="backgroundHighlight typeReversed1">
+        <div class="container">
+          <h1 class="h2 mvs">My Style Guide</h1>
+        </div>
+      </div>
+      <div class="backgroundLowlight typeReversed1">
+        <div class="container">
+          <span>
+            <ul class="docNav listInline">
+              <!-- Add you pages here -->
+              <li><a href="index.html">Intro</a></li>
+              <li><a href="base_css.html">Base CSS</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="javascript.html">Javascript</a></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <!-- //header/container -->
+    </header>
+
+    <div class="content">
+      <section class="container">
+        <div class="line">
+
+          <div class="col cols4">
+            <div class="componentMenu box boxBasic backgroundBasic">
+              <div class="boxBody pan">
+                <ul class="componentList listBorderedHover">
+                  
+                    <li><a href="#panel">Panels</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="main col cols20 lastCol">
+<h1 id="panel">Panels</h1>
+
+<p>Example usage of basic panels.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>
+<p>Panel with header decorations. You can use the classes <code>arrow</code> and <code>border-bottom</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header arrow'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel'>
+  <header class='panel-header border-bottom'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.arrow</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.border-bottom</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>
+<p>Panel colors.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel red'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel green'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel pink'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel orange'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel.red</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.green</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.pink</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.orange</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>      </div>
+    </div>
+  </section>
+  <footer>
+    The source code for this style guide is licensed under the MIT license.
+  </footer>
+</div>
+<script>
+$(document).ready(function() {
+
+  // build simple sidebar navigation
+  var $headers = $('.main > h1');
+  var $componentList = $('.componentList');
+
+  $headers.each(function() {
+    var headerText = $(this).text();
+    $(this).attr('id', headerText);
+
+    $componentList.append(
+      '<li><a href="#' + headerText + '">' + headerText + '</a></li>'
+    );
+  });
+
+  // set the active tab
+  var currentHref = document.location.pathname.substr(1);
+  if (currentHref)
+  {
+    $('.docNav').find('a[href^="' + currentHref + '"]').addClass('activeNavElem typeEmphasize');
+  }
+  else
+  {
+    $('.docNav').find('a').eq(0).addClass('activeNavElem typeEmphasize');
+  }
+
+
+});
+</script>
+</body>
+</html>

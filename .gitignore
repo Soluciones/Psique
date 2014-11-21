@@ -2,10 +2,8 @@
 *.rbc
 *.ruby-version
 *.ruby-gemset
-doc/
-rdoc/
 .bundle/
-log/*.log
+log/
 pkg/
 Gemfile.lock
 Guardfile

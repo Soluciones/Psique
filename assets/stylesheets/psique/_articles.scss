@@ -1,0 +1,31 @@
+.article {
+
+  &-header {
+  }
+
+  &-title {
+  }
+
+  &-meta {
+
+  }
+
+  &-content {
+    .category {
+      @include output-rhythm(margin-right, rhythm(.1));
+      color: #26607b;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.article-content {
+  .thumbnail {
+    .media & {
+      @include span(5);
+      @include output-rhythm(margin-right, rhythm(.5));
+    }
+  }
+}

@@ -1,0 +1,15 @@
+#{ headings() } {
+  @include rhythm($leader: 0, $trailer: .5);
+  color: $headings-color;
+  // font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+h1 { @include adjust-font-size-to($font-size-h1, 1.6); }
+h2 { @include adjust-font-size-to($font-size-h2, 1.4); }
+h3 { @include adjust-font-size-to($font-size-h3, 1.2); }
+h4 { @include adjust-font-size-to($font-size-h4, 1); }
+h5 { @include adjust-font-size-to($font-size-h5, .8); }
+h6 { @include adjust-font-size-to($font-size-h6, .7); }
+
+p { @include rhythm($leader: .5); }

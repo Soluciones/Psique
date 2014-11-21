@@ -1,3 +1,65 @@
+/*doc
+---
+title: Panels
+name: panel
+category: core
+---
+
+Example usage of basic panels.
+
+```haml_example
+%aside.panel
+  %header.panel-header
+    Panel title
+  %section.panel-content
+    Panel content
+```
+
+Panel with header decorations. You can use the classes `arrow` and `border-bottom`.
+
+```haml_example
+%aside.panel
+  %header.panel-header.arrow
+    Panel title
+  %section.panel-content
+    Panel content
+
+%aside.panel
+  %header.panel-header.border-bottom
+    Panel title
+  %section.panel-content
+    Panel content
+```
+
+Panel colors.
+
+```haml_example
+%aside.panel.red
+  %header.panel-header
+    Panel title
+  %section.panel-content
+    Panel content
+
+%aside.panel.green
+  %header.panel-header
+    Panel title
+  %section.panel-content
+    Panel content
+
+%aside.panel.pink
+  %header.panel-header
+    Panel title
+  %section.panel-content
+    Panel content
+
+%aside.panel.orange
+  %header.panel-header
+    Panel title
+  %section.panel-content
+    Panel content
+```
+*/
+
 .panel {
   @include panel(map-get($panel-colors, 'light-blue'), $black, $content-border-color: #ccc);
 
