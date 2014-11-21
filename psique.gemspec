@@ -17,14 +17,15 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split($RS)
   s.test_files  = Dir['test/**/*']
 
-  s.add_development_dependency 'rails'
+  s.add_development_dependency 'rails', '~> 4.1-stable'
   s.add_development_dependency 'sprockets', '~> 2.11.0'
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'rails-assets-holderjs'
+  s.add_development_dependency 'sqlite3', '~> 1.3.10'
+  s.add_development_dependency 'hologram', '~> 1.2.0'
 
-  s.add_dependency 'sass-rails'
-  s.add_dependency 'compass-rails'
-  s.add_dependency 'normalize-scss'
-  s.add_dependency 'breakpoint'
-  s.add_dependency 'susy'
+  s.add_dependency 'sass-rails', '~> 4.0.1'
+  s.add_dependency 'compass-rails', '~> 2.0.1'
+  s.add_dependency 'normalize-scss', '~> 3.0.2'
+  s.add_dependency 'breakpoint', '~> 2.5.0'
+  s.add_dependency 'susy', '~> 2.1.3'
+  s.add_dependency 'haml', '~> 4.0.5'
 end
