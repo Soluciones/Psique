@@ -12,8 +12,8 @@ $layout-desktop: $screen-desktop static !default;
 $susy: (
   flow: ltr,
   math: fluid,
-  output: float,
-  gutter-position: inside,
+  output: isolation,
+  gutter-position: split,
   container: auto,
   container-position: center,
   columns: 12,

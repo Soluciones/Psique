@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
+  <head>
     <title>My Style Guide core</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="./brick.png" />
 
     <!-- Styleguide CSS -->
-    <link rel="stylesheet" href="./styleguide/css/doc.css">
-    <link rel="stylesheet" href="./styleguide/css/github.css">
-    <link rel="stylesheet" href="./styleguide/css/screen.css">
+    <link rel="stylesheet" href="/styleguide/css/doc.css">
+    <link rel="stylesheet" href="/styleguide/css/github.css">
+    <link rel="stylesheet" href="/styleguide/css/screen.css">
 
     <!-- CSS to be documented -->
-    <link rel="stylesheet" href="./assets/psique.scss">
+    <link rel="stylesheet" href="/assets/psique.scss">
 
     <!-- Main libraries -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.4.1/holder.js"></script>
-    <script src="./styleguide/script/components.js"></script>
+    <script src="/styleguide/script/components.js"></script>
   </head>
 
   <body>
@@ -33,11 +31,9 @@
         <div class="container">
           <span>
             <ul class="docNav listInline">
-              <!-- Add you pages here -->
-              <li><a href="index.html">Intro</a></li>
-              <li><a href="base_css.html">Base CSS</a></li>
-              <li><a href="components.html">Components</a></li>
-              <li><a href="javascript.html">Javascript</a></li>
+            
+              <li><a href="/styleguide/core.html">core</a></li>
+            
             </ul>
           </span>
         </div>
@@ -164,42 +160,10 @@
     Panel title
   <span class="nt">%section</span><span class="nc">.panel-content</span>
     Panel content
-</pre></div></div></div>      </div>
+</pre></div></div></div>      </section>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
     </div>
-  </section>
-  <footer>
-    The source code for this style guide is licensed under the MIT license.
-  </footer>
-</div>
-<script>
-$(document).ready(function() {
-
-  // build simple sidebar navigation
-  var $headers = $('.main > h1');
-  var $componentList = $('.componentList');
-
-  $headers.each(function() {
-    var headerText = $(this).text();
-    $(this).attr('id', headerText);
-
-    $componentList.append(
-      '<li><a href="#' + headerText + '">' + headerText + '</a></li>'
-    );
-  });
-
-  // set the active tab
-  var currentHref = document.location.pathname.substr(1);
-  if (currentHref)
-  {
-    $('.docNav').find('a[href^="' + currentHref + '"]').addClass('activeNavElem typeEmphasize');
-  }
-  else
-  {
-    $('.docNav').find('a').eq(0).addClass('activeNavElem typeEmphasize');
-  }
-
-
-});
-</script>
-</body>
+  </body>
 </html>

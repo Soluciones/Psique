@@ -1,15 +1,4 @@
 .article {
-
-  &-header {
-  }
-
-  &-title {
-  }
-
-  &-meta {
-
-  }
-
   &-content {
     .category {
       @include output-rhythm(margin-right, rhythm(.1));

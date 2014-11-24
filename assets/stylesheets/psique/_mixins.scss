@@ -1,10 +1,15 @@
 // Generate the grid for a particular size
-@mixin make-grid($size) {
+@mixin make-cols($size) {
 
   @for $i from 1 through susy-get(columns) {
     .col-#{$size}-#{$i} {
       @include span($i);
       @include trailer(susy-get(gutters));
+
+      > .row {
+        margin: 0 (- gutter()) (- gutter());
+        overflow: hidden;
+      }
     }
   }
 }
