@@ -1,0 +1,128 @@
+/*doc
+---
+title: Summary news
+name: Summary
+category: core
+---
+
+Example usage of basic panels.
+
+```haml_example
+%article.summary.small
+  .summary-left
+    %img{:src => "holder.js/100%x80"}
+  .summary-right
+    %header.summary-header
+      %h4.category reprehenderit
+      %h4.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+%article.summary.medium
+  .summary-left
+    %img{:src => "holder.js/100%x120"}
+  .summary-right
+    %header.summary-header
+      %h3.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+        %span.author john doe
+
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+%article.summary.new
+  %header.summary-header
+    %h3.summary-title
+      %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+  %section.summary-content
+    .thumbnail
+      %img{:src => "holder.js/100%x120"}
+    .summary-meta
+      .author john doe
+      .comments
+        %i.fa.fa-comment 7
+    %p
+      %a.topic{href: '#'} officia consectetur.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+*/
+
+
+%summary {
+  @extend .row;
+
+  .summary-title {
+    color: #0a4967;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    a { color: #0a4967; }
+
+  }
+
+  .author {
+    color: #666;
+    display: inline-block;
+    font-size: 11px !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .comments {
+    color: #0a4967;
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .summary-content {
+    p {
+      color: #323131;
+      font-size: 13px;
+      line-height: 1.2em;
+      margin: 0;
+    }
+  }
+
+  .category {
+    color: #0a4967;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .topic {
+    color: #0a4967;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.summary {
+  @extend %summary;
+
+  &.small {
+    .summary-left { @extend .col-sm-3; }
+    .summary-right { @extend .col-sm-9; }
+  }
+
+  &.medium {
+    .summary-left { @extend .col-sm-5; }
+    .summary-right { @extend .col-sm-7; }
+  }
+
+  &.new {
+    .summary-header { @extend .col-sm-12; }
+    .summary-content {
+      .thumbnail { @extend .col-sm-5; }
+      p { @extend .col-sm-7;}
+    }
+    .summary-meta { @extend .col-sm-7; }
+  }
+}
