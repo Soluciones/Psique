@@ -8,7 +8,7 @@ category: core
 Example usage of basic panels.
 
 ```haml_example
-%article.summary-small
+%article.summary.small
   .summary-left
     %img{:src => "holder.js/100%x80"}
   .summary-right
@@ -20,21 +20,40 @@ Example usage of basic panels.
       %p
         %a.topic{href: '#'} officia consectetur.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+%article.summary.medium
+  .summary-left
+    %img{:src => "holder.js/100%x120"}
+  .summary-right
+    %header.summary-header
+      %h3.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+        %span.author john doe
+
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 ```
 */
 
-.summary-small {
+%summary {
   @extend .row;
 
-  .summary-left { @extend .col-sm-3; }
-  .summary-right { @extend .col-sm-9; }
   .summary-title {
     color: #0a4967;
-    font-size: 14px;
     font-weight: bold;
     margin-bottom: 0;
 
     a { color: #0a4967; }
+
+    .author {
+      color: #666;
+      font-size: 11px !important;
+      font-weight: normal;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
   }
 
   .summary-content {
@@ -58,5 +77,19 @@ Example usage of basic panels.
     color: #0a4967;
     font-size: 12px;
     text-transform: uppercase;
+  }
+}
+
+.summary {
+  @extend %summary;
+
+  &.small {
+    .summary-left { @extend .col-sm-3; }
+    .summary-right { @extend .col-sm-9; }
+  }
+
+  &.medium {
+    .summary-left { @extend .col-sm-5; }
+    .summary-right { @extend .col-sm-7; }
   }
 }

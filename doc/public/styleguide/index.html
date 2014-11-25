@@ -166,7 +166,7 @@
 <h1 id="Summary">Summary news</h1>
 
 <p>Example usage of basic panels.</p>
-<div class="codeExample"><div class="exampleOutput"><article class='summary-small'>
+<div class="codeExample"><div class="exampleOutput"><article class='summary small'>
   <div class='summary-left'>
     <img src='holder.js/100%x80'>
   </div>
@@ -185,7 +185,26 @@
     </section>
   </div>
 </article>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%article</span><span class="nc">.summary-small</span>
+<article class='summary medium'>
+  <div class='summary-left'>
+    <img src='holder.js/100%x120'>
+  </div>
+  <div class='summary-right'>
+    <header class='summary-header'>
+      <h3 class='summary-title'>
+        <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing</a>
+        <span class='author'>john doe</span>
+      </h3>
+    </header>
+    <section class='summary-content'>
+      <p>
+        <a class='topic' href='#'>officia consectetur.</a>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </section>
+  </div>
+</article>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%article</span><span class="nc">.summary.small</span>
   <span class="nc">.summary-left</span>
     <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x80"</span><span class="p">}</span>
   <span class="nc">.summary-right</span>
@@ -193,6 +212,20 @@
       <span class="nt">%h4</span><span class="nc">.category</span> reprehenderit
       <span class="nt">%h4</span><span class="nc">.summary-title</span>
         <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+    <span class="nt">%section</span><span class="nc">.summary-content</span>
+      <span class="nt">%p</span>
+        <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+<span class="nt">%article</span><span class="nc">.summary.medium</span>
+  <span class="nc">.summary-left</span>
+    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x120"</span><span class="p">}</span>
+  <span class="nc">.summary-right</span>
+    <span class="nt">%header</span><span class="nc">.summary-header</span>
+      <span class="nt">%h3</span><span class="nc">.summary-title</span>
+        <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+        <span class="nt">%span</span><span class="nc">.author</span> john doe
+
     <span class="nt">%section</span><span class="nc">.summary-content</span>
       <span class="nt">%p</span>
         <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
