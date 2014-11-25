@@ -14,3 +14,7 @@
 @include breakpoint($screen-mobile) {
   @include make-cols('lg');
 }
+
+.row {
+  overflow: hidden;
+}

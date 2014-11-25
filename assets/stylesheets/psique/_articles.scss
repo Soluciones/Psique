@@ -1,20 +1,62 @@
-.article {
-  &-content {
-    .category {
-      @include output-rhythm(margin-right, rhythm(.1));
-      color: #26607b;
-      text-decoration: none;
-      text-transform: uppercase;
+/*doc
+---
+title: Summary news
+name: Summary
+category: core
+---
+
+Example usage of basic panels.
+
+```haml_example
+%article.summary-small
+  .summary-left
+    %img{:src => "holder.js/100%x80"}
+  .summary-right
+    %header.summary-header
+      %h4.category reprehenderit
+      %h4.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+*/
+
+.summary-small {
+  @extend .row;
+
+  .summary-left { @extend .col-sm-3; }
+  .summary-right { @extend .col-sm-9; }
+  .summary-title {
+    color: #0a4967;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    a { color: #0a4967; }
+  }
+
+  .summary-content {
+    p {
+      color: #323131;
+      font-size: 13px;
+      line-height: 1.2em;
+      margin: 0;
     }
   }
-}
 
+  .category {
+    color: #0a4967;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
 
-.article-content {
-  .thumbnail {
-    .media & {
-      @include span(5);
-      @include output-rhythm(margin-right, rhythm(.5));
-    }
+  .topic {
+    color: #0a4967;
+    font-size: 12px;
+    text-transform: uppercase;
   }
 }
