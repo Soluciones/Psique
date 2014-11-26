@@ -226,6 +226,28 @@
     </p>
   </section>
 </article>
+<article class='summary default'>
+  <header class='summary-header'>
+    <h2 class='summary-title'>
+      <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing</a>
+    </h2>
+    <div class='summary-meta'>
+      <div class='author'>john doe</div>
+      <div class='comments'>
+        <i class='fa fa-comment'>7</i>
+      </div>
+    </div>
+  </header>
+  <section class='summary-content'>
+    <div class='thumbnail'>
+      <img src='holder.js/100%x200'>
+    </div>
+    <p>
+      <a class='topic' href='#'>officia consectetur.</a>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+    </p>
+  </section>
+</article>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%article</span><span class="nc">.summary.small</span>
   <span class="nc">.summary-left</span>
     <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x80"</span><span class="p">}</span>
@@ -264,6 +286,21 @@
       <span class="nc">.author</span> john doe
       <span class="nc">.comments</span>
         <span class="nt">%i</span><span class="nc">.fa.fa-comment</span> 7
+    <span class="nt">%p</span>
+      <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+<span class="nt">%article</span><span class="nc">.summary.default</span>
+  <span class="nt">%header</span><span class="nc">.summary-header</span>
+    <span class="nt">%h2</span><span class="nc">.summary-title</span>
+      <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+    <span class="nc">.summary-meta</span>
+      <span class="nc">.author</span> john doe
+      <span class="nc">.comments</span>
+        <span class="nt">%i</span><span class="nc">.fa.fa-comment</span> 7
+  <span class="nt">%section</span><span class="nc">.summary-content</span>
+    <span class="nc">.thumbnail</span>
+      <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x200"</span><span class="p">}</span>
     <span class="nt">%p</span>
       <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
