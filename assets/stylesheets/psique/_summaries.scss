@@ -10,7 +10,7 @@ Example usage of basic panels.
 ```haml_example
 %article.summary.small
   .summary-left
-    %img{:src => "holder.js/100%x80"}
+    %img{:src => "http://www.fillmurray.com/g/400/150/"}
   .summary-right
     %header.summary-header
       %h4.category reprehenderit
@@ -23,7 +23,7 @@ Example usage of basic panels.
 
 %article.summary.medium
   .summary-left
-    %img{:src => "holder.js/100%x120"}
+    %img{:src => "http://www.fillmurray.com/g/400/125/"}
   .summary-right
     %header.summary-header
       %h3.summary-title
@@ -41,7 +41,7 @@ Example usage of basic panels.
       %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
   %section.summary-content
     .thumbnail
-      %img{:src => "holder.js/100%x120"}
+      %img{:src => "http://www.fillmurray.com/g/375/100/"}
     .summary-meta
       .author john doe
       .comments
@@ -60,17 +60,34 @@ Example usage of basic panels.
         %i.fa.fa-comment 7
   %section.summary-content
     .thumbnail
-      %img{:src => "holder.js/100%x200"}
+      %img{:src => "http://www.fillmurray.com/g/800/250/"}
     %p
       %a.topic{href: '#'} officia consectetur.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+%article.summary.featured
+  .summary-left
+    %img{:src => "http://www.fillmurray.com/400/155/"}
+  .summary-right
+    %header.summary-header
+      %h2.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+      .summary-meta
+        .author john doe
+        .comments
+          %i.fa.fa-comment 7
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 ```
 */
 
 
 %summary {
   @extend .row;
-
+  padding: .2em;
+  
   .summary-title {
     color: #0a4967;
     font-weight: bold;
@@ -122,6 +139,11 @@ Example usage of basic panels.
   .thumbnail {
     margin-bottom: 1em;
   }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .summary {
@@ -152,5 +174,12 @@ Example usage of basic panels.
   &.default {
     .summary-header { @extend .col-sm-12; }
     .summary-content { @extend .col-sm-12; }
+  }
+
+  &.featured {
+    .summary-left { @extend .col-sm-5; }
+    .summary-right { @extend .col-sm-7; }
+    .summary-meta { margin: .25em 0; }
+    background-color: #F4F3F5;
   }
 }

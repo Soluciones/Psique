@@ -168,7 +168,7 @@
 <p>Example usage of basic panels.</p>
 <div class="codeExample"><div class="exampleOutput"><article class='summary small'>
   <div class='summary-left'>
-    <img src='holder.js/100%x80'>
+    <img src='http://www.fillmurray.com/g/400/150/'>
   </div>
   <div class='summary-right'>
     <header class='summary-header'>
@@ -187,7 +187,7 @@
 </article>
 <article class='summary medium'>
   <div class='summary-left'>
-    <img src='holder.js/100%x120'>
+    <img src='http://www.fillmurray.com/g/400/125/'>
   </div>
   <div class='summary-right'>
     <header class='summary-header'>
@@ -212,7 +212,7 @@
   </header>
   <section class='summary-content'>
     <div class='thumbnail'>
-      <img src='holder.js/100%x120'>
+      <img src='http://www.fillmurray.com/g/375/100/'>
     </div>
     <div class='summary-meta'>
       <div class='author'>john doe</div>
@@ -240,7 +240,7 @@
   </header>
   <section class='summary-content'>
     <div class='thumbnail'>
-      <img src='holder.js/100%x200'>
+      <img src='http://www.fillmurray.com/g/800/250/'>
     </div>
     <p>
       <a class='topic' href='#'>officia consectetur.</a>
@@ -248,9 +248,33 @@
     </p>
   </section>
 </article>
+<article class='summary featured'>
+  <div class='summary-left'>
+    <img src='http://www.fillmurray.com/400/155/'>
+  </div>
+  <div class='summary-right'>
+    <header class='summary-header'>
+      <h2 class='summary-title'>
+        <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing</a>
+      </h2>
+      <div class='summary-meta'>
+        <div class='author'>john doe</div>
+        <div class='comments'>
+          <i class='fa fa-comment'>7</i>
+        </div>
+      </div>
+    </header>
+    <section class='summary-content'>
+      <p>
+        <a class='topic' href='#'>officia consectetur.</a>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </section>
+  </div>
+</article>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%article</span><span class="nc">.summary.small</span>
   <span class="nc">.summary-left</span>
-    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x80"</span><span class="p">}</span>
+    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/400/150/"</span><span class="p">}</span>
   <span class="nc">.summary-right</span>
     <span class="nt">%header</span><span class="nc">.summary-header</span>
       <span class="nt">%h4</span><span class="nc">.category</span> reprehenderit
@@ -263,7 +287,7 @@
 
 <span class="nt">%article</span><span class="nc">.summary.medium</span>
   <span class="nc">.summary-left</span>
-    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x120"</span><span class="p">}</span>
+    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/400/125/"</span><span class="p">}</span>
   <span class="nc">.summary-right</span>
     <span class="nt">%header</span><span class="nc">.summary-header</span>
       <span class="nt">%h3</span><span class="nc">.summary-title</span>
@@ -281,7 +305,7 @@
       <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
   <span class="nt">%section</span><span class="nc">.summary-content</span>
     <span class="nc">.thumbnail</span>
-      <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x120"</span><span class="p">}</span>
+      <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/375/100/"</span><span class="p">}</span>
     <span class="nc">.summary-meta</span>
       <span class="nc">.author</span> john doe
       <span class="nc">.comments</span>
@@ -300,10 +324,26 @@
         <span class="nt">%i</span><span class="nc">.fa.fa-comment</span> 7
   <span class="nt">%section</span><span class="nc">.summary-content</span>
     <span class="nc">.thumbnail</span>
-      <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"holder.js/100%x200"</span><span class="p">}</span>
+      <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/800/250/"</span><span class="p">}</span>
     <span class="nt">%p</span>
       <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+<span class="nt">%article</span><span class="nc">.summary.featured</span>
+  <span class="nc">.summary-left</span>
+    <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/400/155/"</span><span class="p">}</span>
+  <span class="nc">.summary-right</span>
+    <span class="nt">%header</span><span class="nc">.summary-header</span>
+      <span class="nt">%h2</span><span class="nc">.summary-title</span>
+        <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+      <span class="nc">.summary-meta</span>
+        <span class="nc">.author</span> john doe
+        <span class="nc">.comments</span>
+          <span class="nt">%i</span><span class="nc">.fa.fa-comment</span> 7
+    <span class="nt">%section</span><span class="nc">.summary-content</span>
+      <span class="nt">%p</span>
+        <span class="nt">%a</span><span class="nc">.topic</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 </pre></div></div></div>      </section>
       <footer>
         <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
