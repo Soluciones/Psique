@@ -1,29 +1,36 @@
 /*doc
 ---
-title: Summary news
-name: Summary
-category: core
+title: Summaries
+name: summary
+category: Components
 ---
 
-Example usage of basic panels.
+A summary is a representative of a complete news extract, to place it in some
+prominent and visible place in the website. The different formats summary,
+allow give more importance to some elements or others, according to their
+position on the page.
 
 ```haml_example
-%article.summary.small
+%article.summary.featured
   .summary-left
-    %img{:src => "http://www.fillmurray.com/g/400/150/"}
+    %img{:src => "http://www.fillmurray.com/400/305/"}
   .summary-right
     %header.summary-header
-      %h4.category reprehenderit
-      %h4.summary-title
+      %h2.summary-title
         %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+      .summary-meta
+        .author john doe
+        .comments
+          %i.fa.fa-comment 7
     %section.summary-content
       %p
         %a.topic{href: '#'} officia consectetur.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
+```
+```haml_example
 %article.summary.medium
   .summary-left
-    %img{:src => "http://www.fillmurray.com/g/400/125/"}
+    %img{:src => "http://www.fillmurray.com/g/400/300/"}
   .summary-right
     %header.summary-header
       %h3.summary-title
@@ -34,14 +41,15 @@ Example usage of basic panels.
       %p
         %a.topic{href: '#'} officia consectetur.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
+```
+```haml_example
 %article.summary.new
   %header.summary-header
     %h3.summary-title
       %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
   %section.summary-content
     .thumbnail
-      %img{:src => "http://www.fillmurray.com/g/375/100/"}
+      %img{:src => "http://www.fillmurray.com/g/375/250/"}
     .summary-meta
       .author john doe
       .comments
@@ -49,7 +57,8 @@ Example usage of basic panels.
     %p
       %a.topic{href: '#'} officia consectetur.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
+```
+```haml_example
 %article.summary.default
   %header.summary-header
     %h2.summary-title
@@ -64,18 +73,16 @@ Example usage of basic panels.
     %p
       %a.topic{href: '#'} officia consectetur.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
-%article.summary.featured
+```
+```haml_example
+%article.summary.small
   .summary-left
-    %img{:src => "http://www.fillmurray.com/400/155/"}
+    %img{:src => "http://www.fillmurray.com/g/400/150/"}
   .summary-right
     %header.summary-header
-      %h2.summary-title
+      %h4.category reprehenderit
+      %h4.summary-title
         %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
-      .summary-meta
-        .author john doe
-        .comments
-          %i.fa.fa-comment 7
     %section.summary-content
       %p
         %a.topic{href: '#'} officia consectetur.
@@ -87,14 +94,13 @@ Example usage of basic panels.
 %summary {
   @extend .row;
   padding: .2em;
-  
+
   .summary-title {
-    color: #0a4967;
+    color: $primary-color;
     font-weight: bold;
     margin-bottom: 0;
 
-    a { color: #0a4967; }
-
+    a { color: $primary-color; }
   }
 
   .author {
@@ -107,7 +113,7 @@ Example usage of basic panels.
   }
 
   .comments {
-    color: #0a4967;
+    color: $primary-color;
     display: inline-block;
     margin-left: 1em;
     font-size: 14px;
@@ -123,7 +129,7 @@ Example usage of basic panels.
   }
 
   .category {
-    color: #0a4967;
+    color: $primary-color;
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 0;
@@ -131,13 +137,13 @@ Example usage of basic panels.
   }
 
   .topic {
-    color: #0a4967;
+    color: $primary-color;
     font-size: 12px;
     text-transform: uppercase;
   }
 
   .thumbnail {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
   }
 
   img {
@@ -148,9 +154,6 @@ Example usage of basic panels.
 
 .summary {
   @extend %summary;
-  h2 { font-size: 31px; }
-  h3 { font-size: 18px; }
-  h4 { font-size: 14px; }
 
   &.small {
     .summary-left { @extend .col-sm-3; }
