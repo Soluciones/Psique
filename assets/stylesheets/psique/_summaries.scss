@@ -1,0 +1,188 @@
+/*doc
+---
+title: Summaries
+name: summary
+category: Components
+---
+
+A summary is a representative of a complete news extract, to place it in some
+prominent and visible place in the website. The different formats summary,
+allow give more importance to some elements or others, according to their
+position on the page.
+
+```haml_example
+%article.summary.featured
+  .summary-left
+    %img{:src => "http://www.fillmurray.com/400/305/"}
+  .summary-right
+    %header.summary-header
+      %h2.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+      .summary-meta
+        .author john doe
+        .comments
+          %i.fa.fa-comment 7
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+```haml_example
+%article.summary.medium
+  .summary-left
+    %img{:src => "http://www.fillmurray.com/g/400/300/"}
+  .summary-right
+    %header.summary-header
+      %h3.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+        %span.author john doe
+
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+```haml_example
+%article.summary.new
+  %header.summary-header
+    %h3.summary-title
+      %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+  %section.summary-content
+    .thumbnail
+      %img{:src => "http://www.fillmurray.com/g/375/250/"}
+    .summary-meta
+      .author john doe
+      .comments
+        %i.fa.fa-comment 7
+    %p
+      %a.topic{href: '#'} officia consectetur.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+```haml_example
+%article.summary.default
+  %header.summary-header
+    %h2.summary-title
+      %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+    .summary-meta
+      .author john doe
+      .comments
+        %i.fa.fa-comment 7
+  %section.summary-content
+    .thumbnail
+      %img{:src => "http://www.fillmurray.com/g/800/250/"}
+    %p
+      %a.topic{href: '#'} officia consectetur.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+```haml_example
+%article.summary.small
+  .summary-left
+    %img{:src => "http://www.fillmurray.com/g/400/150/"}
+  .summary-right
+    %header.summary-header
+      %h4.category reprehenderit
+      %h4.summary-title
+        %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+    %section.summary-content
+      %p
+        %a.topic{href: '#'} officia consectetur.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+```
+*/
+
+
+%summary {
+  @extend .row;
+  padding: .2em;
+
+  .summary-title {
+    color: $primary-color;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    a { color: $primary-color; }
+  }
+
+  .author {
+    color: #666;
+    display: inline-block;
+    font-size: 11px !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .comments {
+    color: $primary-color;
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 14px;
+  }
+
+  .summary-content {
+    p {
+      color: #323131;
+      font-size: 13px;
+      line-height: 1.2em;
+      margin: 0;
+    }
+  }
+
+  .category {
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .topic {
+    color: $primary-color;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .thumbnail {
+    margin-bottom: .5em;
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.summary {
+  @extend %summary;
+
+  &.small {
+    .summary-left { @extend .col-sm-3; }
+    .summary-right { @extend .col-sm-9; }
+  }
+
+  &.medium {
+    .summary-left { @extend .col-sm-5; }
+    .summary-right { @extend .col-sm-7; }
+  }
+
+  &.new {
+    .summary-header { @extend .col-sm-12; }
+    .summary-content {
+      .thumbnail { @extend .col-sm-5; }
+      p { @extend .col-sm-7;}
+    }
+    .summary-meta { @extend .col-sm-7; }
+  }
+
+  &.default {
+    .summary-header { @extend .col-sm-12; }
+    .summary-content { @extend .col-sm-12; }
+  }
+
+  &.featured {
+    .summary-left { @extend .col-sm-5; }
+    .summary-right { @extend .col-sm-7; }
+    .summary-meta { margin: .25em 0; }
+    background-color: #F4F3F5;
+  }
+}

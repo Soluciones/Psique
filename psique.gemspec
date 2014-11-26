@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'breakpoint', '~> 2.5.0'
   s.add_dependency 'susy', '~> 2.1.3'
   s.add_dependency 'haml', '~> 4.0.5'
+  s.add_dependency 'font-awesome-rails', '~> 4.2.0.0'
 end
