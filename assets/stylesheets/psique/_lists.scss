@@ -54,8 +54,29 @@ category: Components
         %li
           %a Consectetur
 ```
-*/
 
+```haml_example
+%aside.panel
+  %header.panel-header.border-bottom
+    Otras secciones
+  %section.panel-content
+    .links-decorated
+      %ul.left
+        %li
+          %a Lorem ipsum
+        %li
+          %a Dolor sit amet
+        %li
+          %a Consectetur
+      %ul.right
+        %li
+          %a Lorem ipsum
+        %li
+          %a Dolor sit amet
+        %li
+          %a Consectetur
+```
+*/
 
 %media {
   @extend .row;
@@ -115,6 +136,25 @@ category: Components
     a {
       color: $primary-color;
       font-weight: bold;
+    }
+  }
+}
+
+.links-decorated {
+  @extend .links-clean;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    &:after {
+      border: 1px solid #9a2c2d;
+      content: '';
+      display: block;
+      height: 8px;
+      left: 0;
+      position: absolute;
+      top: 30%;
+      width: 8px;
     }
   }
 }
