@@ -1,0 +1,84 @@
+/*doc
+---
+title: Lists
+name: list
+category: Components
+---
+
+```haml_example
+%aside.panel
+  %header.panel-header.border-bottom
+    Foros
+  %section.panel-content
+    %article.media
+      .media-left
+        %img{:src => "http://www.fillmurray.com/g/75/70/"}
+      .media-right
+        %header.media-header
+          %h4.media-title
+            %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+            %span.author john doe
+        %section.media-content
+          %p Lorem ipsum dolor sit amet consectetur adipisicing.
+
+    %article.media
+      .media-left
+        %img{:src => "http://www.fillmurray.com/g/80/75/"}
+      .media-right
+        %header.media-header
+          %h4.media-title
+            %a{href: '#'} Lorem ipsum dolor sit amet consectetur adipisicing
+            %span.author john doe
+        %section.media-content
+          %p Lorem ipsum dolor sit amet consectetur adipisicing.
+```
+
+*/
+
+
+%media {
+  @extend .row;
+
+  .media-title {
+    color: $primary-color;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1em;
+    a { color: $primary-color; }
+  }
+
+  .author {
+    color: #666;
+    display: inline-block;
+    font-size: 11px !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .media-content {
+    p {
+      color: #323131;
+      font-size: 14px;
+      line-height: 1.2em;
+      margin: 0;
+      margin-top: .5em;
+    }
+  }
+
+  .thumbnail {
+    margin-bottom: .5em;
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.media {
+  @extend %media;
+
+  .media-left { @extend .col-sm-2; }
+  .media-right { @extend .col-sm-10; }
+}

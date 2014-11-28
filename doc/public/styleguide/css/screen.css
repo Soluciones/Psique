@@ -11,3 +11,6 @@
 .styleguide .exampleOutput .summary {
   margin-bottom: 2em;
 }
+.styleguide .exampleOutput .panel {
+  width: 45%;
+}
