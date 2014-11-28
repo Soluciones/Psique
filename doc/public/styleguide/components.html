@@ -32,9 +32,9 @@
           <span>
             <ul class="docNav listInline">
             
-              <li><a href="/styleguide/core.html">core</a></li>
-            
               <li><a href="/styleguide/components.html">Components</a></li>
+            
+              <li><a href="/styleguide/core.html">Core</a></li>
             
             </ul>
           </span>
@@ -52,6 +52,8 @@
               <div class="boxBody pan">
                 <ul class="componentList listBorderedHover">
                   
+                    <li><a href="#panel">Panels</a></li>
+                  
                     <li><a href="#summary">Summaries</a></li>
                   
                 </ul>
@@ -60,6 +62,109 @@
           </div>
 
           <div class="main col cols20 lastCol">
+<h1 id="panel">Panels</h1>
+
+<p>Example usage of basic panels.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>
+<p>Panel with header decorations. You can use the classes <code>arrow</code> and <code>border-bottom</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header arrow'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel'>
+  <header class='panel-header border-bottom'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.arrow</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.border-bottom</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>
+<p>Panel colors.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel red'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel green'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel pink'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+<aside class='panel orange'>
+  <header class='panel-header'>
+    Panel title
+  </header>
+  <section class='panel-content'>
+    Panel content
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel.red</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.green</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.pink</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+
+<span class="nt">%aside</span><span class="nc">.panel.orange</span>
+  <span class="nt">%header</span><span class="nc">.panel-header</span>
+    Panel title
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    Panel content
+</pre></div></div></div>
 <h1 id="summary">Summaries</h1>
 
 <p>A summary is a representative of a complete news extract, to place it in some
