@@ -33,6 +33,27 @@ category: Components
           %p Lorem ipsum dolor sit amet consectetur adipisicing.
 ```
 
+```haml_example
+%aside.panel
+  %header.panel-header.border-bottom
+    Otras secciones
+  %section.panel-content
+    .links-clean
+      %ul.left
+        %li
+          %a Lorem ipsum
+        %li
+          %a Dolor sit amet
+        %li
+          %a Consectetur
+      %ul.right
+        %li
+          %a Lorem ipsum
+        %li
+          %a Dolor sit amet
+        %li
+          %a Consectetur
+```
 */
 
 
@@ -81,4 +102,19 @@ category: Components
 
   .media-left { @extend .col-sm-2; }
   .media-right { @extend .col-sm-10; }
+}
+
+.links-clean {
+  @extend .row;
+  ul {
+    margin: 0;
+    padding: 0;
+    &.left { @extend .col-sm-6; }
+    &.right { @extend .col-sm-6; }
+
+    a {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
 }
