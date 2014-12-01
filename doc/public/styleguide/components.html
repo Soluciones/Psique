@@ -52,6 +52,8 @@
               <div class="boxBody pan">
                 <ul class="componentList listBorderedHover">
                   
+                    <li><a href="#list">Lists</a></li>
+                  
                     <li><a href="#panel">Panels</a></li>
                   
                     <li><a href="#summary">Summaries</a></li>
@@ -62,6 +64,172 @@
           </div>
 
           <div class="main col cols20 lastCol">
+<h1 id="list">Lists</h1>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header border-bottom'>
+    Foros
+  </header>
+  <section class='panel-content'>
+    <article class='media'>
+      <div class='media-left'>
+        <img src='http://www.fillmurray.com/g/75/70/'>
+      </div>
+      <div class='media-right'>
+        <header class='media-header'>
+          <h4 class='media-title'>
+            <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing</a>
+            <span class='author'>john doe</span>
+          </h4>
+        </header>
+        <section class='media-content'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </section>
+      </div>
+    </article>
+    <article class='media'>
+      <div class='media-left'>
+        <img src='http://www.fillmurray.com/g/80/75/'>
+      </div>
+      <div class='media-right'>
+        <header class='media-header'>
+          <h4 class='media-title'>
+            <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing</a>
+            <span class='author'>john doe</span>
+          </h4>
+        </header>
+        <section class='media-content'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </section>
+      </div>
+    </article>
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.border-bottom</span>
+    Foros
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    <span class="nt">%article</span><span class="nc">.media</span>
+      <span class="nc">.media-left</span>
+        <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/75/70/"</span><span class="p">}</span>
+      <span class="nc">.media-right</span>
+        <span class="nt">%header</span><span class="nc">.media-header</span>
+          <span class="nt">%h4</span><span class="nc">.media-title</span>
+            <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+            <span class="nt">%span</span><span class="nc">.author</span> john doe
+        <span class="nt">%section</span><span class="nc">.media-content</span>
+          <span class="nt">%p</span> Lorem ipsum dolor sit amet consectetur adipisicing.
+
+    <span class="nt">%article</span><span class="nc">.media</span>
+      <span class="nc">.media-left</span>
+        <span class="nt">%img</span><span class="p">{</span><span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">"http://www.fillmurray.com/g/80/75/"</span><span class="p">}</span>
+      <span class="nc">.media-right</span>
+        <span class="nt">%header</span><span class="nc">.media-header</span>
+          <span class="nt">%h4</span><span class="nc">.media-title</span>
+            <span class="nt">%a</span><span class="p">{</span><span class="ss">href: </span><span class="s1">'#'</span><span class="p">}</span> Lorem ipsum dolor sit amet consectetur adipisicing
+            <span class="nt">%span</span><span class="nc">.author</span> john doe
+        <span class="nt">%section</span><span class="nc">.media-content</span>
+          <span class="nt">%p</span> Lorem ipsum dolor sit amet consectetur adipisicing.
+</pre></div></div></div><div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header border-bottom'>
+    Otras secciones
+  </header>
+  <section class='panel-content'>
+    <div class='links-clean'>
+      <ul class='left'>
+        <li>
+          <a>Lorem ipsum</a>
+        </li>
+        <li>
+          <a>Dolor sit amet</a>
+        </li>
+        <li>
+          <a>Consectetur</a>
+        </li>
+      </ul>
+      <ul class='right'>
+        <li>
+          <a>Lorem ipsum</a>
+        </li>
+        <li>
+          <a>Dolor sit amet</a>
+        </li>
+        <li>
+          <a>Consectetur</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.border-bottom</span>
+    Otras secciones
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    <span class="nc">.links-clean</span>
+      <span class="nt">%ul</span><span class="nc">.left</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Lorem ipsum
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Dolor sit amet
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Consectetur
+      <span class="nt">%ul</span><span class="nc">.right</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Lorem ipsum
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Dolor sit amet
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Consectetur
+</pre></div></div></div><div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <header class='panel-header border-bottom'>
+    Otras secciones
+  </header>
+  <section class='panel-content'>
+    <div class='links-decorated'>
+      <ul class='left'>
+        <li>
+          <a>Lorem ipsum</a>
+        </li>
+        <li>
+          <a>Dolor sit amet</a>
+        </li>
+        <li>
+          <a>Consectetur</a>
+        </li>
+      </ul>
+      <ul class='right'>
+        <li>
+          <a>Lorem ipsum</a>
+        </li>
+        <li>
+          <a>Dolor sit amet</a>
+        </li>
+        <li>
+          <a>Consectetur</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%header</span><span class="nc">.panel-header.border-bottom</span>
+    Otras secciones
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    <span class="nc">.links-decorated</span>
+      <span class="nt">%ul</span><span class="nc">.left</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Lorem ipsum
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Dolor sit amet
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Consectetur
+      <span class="nt">%ul</span><span class="nc">.right</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Lorem ipsum
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Dolor sit amet
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Consectetur
+</pre></div></div></div>
 <h1 id="panel">Panels</h1>
 
 <p>Example usage of basic panels.</p>
