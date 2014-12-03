@@ -58,6 +58,23 @@ Panel colors.
   %section.panel-content
     Panel content
 ```
+
+Panel with tabs.
+
+```haml_example
+%aside.panel
+  %ul.tablist{role: 'tablist'}
+    %li.tab.active{'aria-controls' => 'panel1', :role => 'tab', :tabindex => '0'} First tab
+    %li.tab{'aria-controls' => 'panel2', :role => 'tab', :tabindex => '0'} Second tab
+    %li.tab{'aria-controls' => 'panel3', :role => 'tab', :tabindex => '0'} Third tab
+  %section.panel-content
+    #panel1.tabpanel.active{role: 'tabpanel'}
+      First panel
+    #panel2.tabpanel{role: 'tabpanel'}
+      Second panel
+    #panel3.tabpanel{role: 'tabpanel'}
+      Third panel
+```
 */
 
 .panel {
@@ -66,4 +83,40 @@ Panel colors.
   @each $panel-type, $panel-color in map-remove($panel-colors, 'light-blue') {
     &.#{$panel-type} { @include panel($panel-color, $white, #f4f4f6); }
   }
+}
+
+.tablist {
+  @include output-rhythm(5px, rhythm(.4));
+
+  border-bottom: {
+    color: $primary-color;
+    style: solid; }
+  display: table;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.tab {
+  @include reset-focus;
+  background-color: $casper;
+  border-left: 1px solid $white;
+  cursor: pointer;
+  display: table-cell;
+  font-weight: bold;
+  margin: 0;
+  padding: .8rem 0;
+  text-align: center;
+
+  &:first-child { border-left: 0; }
+  &.active {
+    @include arrow(rhythm(.4), $well-read, 48%);
+    background-color: $well-read;
+    color: $white;
+  }
+}
+
+.tabpanel {
+  display: none;
+  &.active { display: block; }
 }

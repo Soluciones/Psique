@@ -1,1 +1,2 @@
-#= require ./psique/panels
+#= require_self
+#= require_tree .
