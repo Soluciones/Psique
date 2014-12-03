@@ -18,6 +18,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.4.1/holder.js"></script>
     <script src="/styleguide/script/components.js"></script>
+    <script src="/assets/psique.js"></script>
   </head>
 
   <body class="styleguide">
@@ -332,6 +333,38 @@
     Panel title
   <span class="nt">%section</span><span class="nc">.panel-content</span>
     Panel content
+</pre></div></div></div>
+<p>Panel with tabs.</p>
+<div class="codeExample"><div class="exampleOutput"><aside class='panel'>
+  <ul class='tablist' role='tablist'>
+    <li aria-controls='panel1' class='tab active' role='tab' tabindex='0'>First tab</li>
+    <li aria-controls='panel2' class='tab' role='tab' tabindex='0'>Second tab</li>
+    <li aria-controls='panel3' class='tab' role='tab' tabindex='0'>Third tab</li>
+  </ul>
+  <section class='panel-content'>
+    <div class='tabpanel active' id='panel1' role='tabpanel'>
+      First panel
+    </div>
+    <div class='tabpanel' id='panel2' role='tabpanel'>
+      Second panel
+    </div>
+    <div class='tabpanel' id='panel3' role='tabpanel'>
+      Third panel
+    </div>
+  </section>
+</aside>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">%aside</span><span class="nc">.panel</span>
+  <span class="nt">%ul</span><span class="nc">.tablist</span><span class="p">{</span><span class="ss">role: </span><span class="s1">'tablist'</span><span class="p">}</span>
+    <span class="nt">%li</span><span class="nc">.tab.active</span><span class="p">{</span><span class="s1">'aria-controls'</span> <span class="o">=&gt;</span> <span class="s1">'panel1'</span><span class="p">,</span> <span class="ss">:role</span> <span class="o">=&gt;</span> <span class="s1">'tab'</span><span class="p">,</span> <span class="ss">:tabindex</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">}</span> First tab
+    <span class="nt">%li</span><span class="nc">.tab</span><span class="p">{</span><span class="s1">'aria-controls'</span> <span class="o">=&gt;</span> <span class="s1">'panel2'</span><span class="p">,</span> <span class="ss">:role</span> <span class="o">=&gt;</span> <span class="s1">'tab'</span><span class="p">,</span> <span class="ss">:tabindex</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">}</span> Second tab
+    <span class="nt">%li</span><span class="nc">.tab</span><span class="p">{</span><span class="s1">'aria-controls'</span> <span class="o">=&gt;</span> <span class="s1">'panel3'</span><span class="p">,</span> <span class="ss">:role</span> <span class="o">=&gt;</span> <span class="s1">'tab'</span><span class="p">,</span> <span class="ss">:tabindex</span> <span class="o">=&gt;</span> <span class="s1">'0'</span><span class="p">}</span> Third tab
+  <span class="nt">%section</span><span class="nc">.panel-content</span>
+    <span class="nf">#panel1</span><span class="nc">.tabpanel.active</span><span class="p">{</span><span class="ss">role: </span><span class="s1">'tabpanel'</span><span class="p">}</span>
+      First panel
+    <span class="nf">#panel2</span><span class="nc">.tabpanel</span><span class="p">{</span><span class="ss">role: </span><span class="s1">'tabpanel'</span><span class="p">}</span>
+      Second panel
+    <span class="nf">#panel3</span><span class="nc">.tabpanel</span><span class="p">{</span><span class="ss">role: </span><span class="s1">'tabpanel'</span><span class="p">}</span>
+      Third panel
 </pre></div></div></div>
 <h1 id="summary">Summaries</h1>
 
