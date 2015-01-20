@@ -1,0 +1,92 @@
+/*doc
+---
+title: Forms
+name: forms
+category: Core
+---
+*/
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 2px;
+  max-width: 100%;
+}
+
+.input {
+  @include trailer(.5);
+
+  select,
+  textarea,
+  input:not([type='checkbox']):not([type='file']):not([type='radio']) {
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .15));
+    @include box-sizing(border-box);
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    background-color: $white;
+    background-image: none;
+    border: 1px solid $aux-grey;
+    border-radius: 4px;
+    color: #444;
+    display: block;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 5px;
+    width: 100%;
+
+    &:focus {
+      @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .15), 0 0 4px $azul-ceruleo);
+      border-color: $azul-ceruleo;
+      outline: 0;
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: none;
+  }
+
+  [type='radio'],
+  [type='checkbox'] {
+    line-height: normal;
+    margin: 1px 0 0;
+    margin-left: -20px;
+    position: absolute;
+  }
+
+  &.boolean,
+  &.radio {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding-left: 20px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &.highlight {
+    label { color: $highlight-color; }
+    select,
+    input:not([type='checkbox']):not([type='file']) {
+      @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .15), 0 0 4px $highlight-color);
+      border-color: $highlight-color;
+    }
+  }
+}
+
+.boolean.upside {
+  padding-left: 0;
+
+  input {
+    margin-left: 0;
+    right: -20px;
+  }
+}
+
+.hint {
+  display: inline-block;
+  font-size: .9em;
+  margin-top: 5px;
+  max-width: 100%;
+}

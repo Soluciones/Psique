@@ -58,6 +58,8 @@
               <div class="boxBody pan">
                 <ul class="componentList listBorderedHover">
                   
+                    <li><a href="#form">Form</a></li>
+                  
                     <li><a href="#list">Lists</a></li>
                   
                     <li><a href="#panel">Panels</a></li>
@@ -70,6 +72,37 @@
           </div>
 
           <div class="main col cols20 lastCol">
+<h1 id="form">Form</h1>
+
+<p>Description</p>
+<div class="codeExample"><div class="exampleOutput"><input type='text'>
+  <textarea></textarea>
+  <h2 class='title-v1'>Lorem ipsum dolor sit amet</h2>
+  <select class='wide'>
+    <option>lorem</option>
+    <option>ipsum</option>
+    <option>dolor</option>
+  </select>
+  <select>
+    <option>lorem</option>
+    <option>ipsum</option>
+    <option>dolor</option>
+    <input class='highlight' type='text'>
+  </select>
+</input>
+</div><div class="codeBlock"><div class="highlight"><pre>  <span class="nt">%input</span><span class="p">{</span><span class="ss">type: </span><span class="s1">'text'</span><span class="p">}</span>
+  <span class="nt">%textarea</span>
+  <span class="nt">%h2</span><span class="nc">.title-v1</span> Lorem ipsum dolor sit amet
+  <span class="nt">%select</span><span class="nc">.wide</span>
+    <span class="nt">%option</span> lorem
+    <span class="nt">%option</span> ipsum
+    <span class="nt">%option</span> dolor
+  <span class="nt">%select</span>
+    <span class="nt">%option</span> lorem
+    <span class="nt">%option</span> ipsum
+    <span class="nt">%option</span> dolor
+    <span class="nt">%input</span><span class="nc">.highlight</span><span class="p">{</span><span class="ss">type: </span><span class="s1">'text'</span><span class="p">}</span>
+</pre></div></div></div>
 <h1 id="list">Lists</h1>
 <div class="codeExample"><div class="exampleOutput"><aside class='panel'>
   <header class='panel-header border-bottom'>
