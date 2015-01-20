@@ -1,6 +1,6 @@
 // Define grid container responsive with one breakpoint
 .grid {
-  @include container(show overlay);
+  @include container;
   @include susy-breakpoint($screen-mobile, $layout-desktop) {
     @include container;
     max-width: none;

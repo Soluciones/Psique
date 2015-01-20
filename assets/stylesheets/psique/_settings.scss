@@ -1,7 +1,7 @@
 // Media queries screens and layouts
 // -------------------------------------------------
 
-$screen-desktop: 1200px !default;
+$screen-desktop: 1000px !default;
 $screen-mobile: 768px !default;
 $layout-desktop: $screen-desktop static !default;
 
@@ -56,7 +56,12 @@ $verdun-green: #426e00 !default;
 $well-read: #ab3132 !default;
 $white: #fff !default;
 
-$primary-color: #0a4967;
+$aux-grey: #d5d5d5;
+$azul-capota: #21689d;
+$azul-ceruleo: #a2baca;
+
+$highlight-color: #00bd00;
+$primary-color: $azul-capota;
 
 
 // Typography

@@ -20,6 +20,7 @@
   &:after {
     @include output-rhythm(border-width, $size);
     @include output-rhythm(bottom, -1.8 * $size);
+    @include translateX(-$offset);
     border: {
       color: transparent;
       style: solid;
@@ -36,17 +37,18 @@
 }
 
 // Generate panel
-@mixin panel($header-bg-color, $header-text-color, $content-bg-color: transparent, $content-border-color: transparent, $padding: 1rem) {
+@mixin panel($header-bg-color, $header-text-color, $content-bg-color: transparent, $content-border-color: transparent, $padding: .4rem) {
   @include trailer(1);
 
   .panel-header {
     @include output-rhythm(padding, $padding);
     background-color: $header-bg-color;
     color: $header-text-color;
+    font-size: 1.2em;
     font-weight: bold;
 
     &.arrow {
-      @include arrow(rhythm(.4), $header-bg-color, rhythm(4));
+      @include arrow(rhythm(.4), $header-bg-color, 20%);
     }
 
     &.border-bottom {
