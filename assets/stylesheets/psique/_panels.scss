@@ -86,8 +86,6 @@ Panel with tabs.
 }
 
 .tablist {
-  @include output-rhythm(5px, rhythm(.4));
-
   border-bottom: {
     color: $primary-color;
     style: solid;
