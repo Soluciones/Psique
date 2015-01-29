@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'styleguide#index'
+  root to: "test#index"
+  mount Psique::Engine => "/psique"
 end
