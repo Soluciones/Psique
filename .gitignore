@@ -16,3 +16,5 @@ test/dummy/.sass-cache
 .*
 *~
 !.gitignore
+!.hound.yml
+!.rubocop.yml
