@@ -9,8 +9,9 @@ module Psique
         end
       end
 
-      initializer 'static assets' do |app|
-        app.middleware.use ::ActionDispatch::Static, "#{root}/doc/public"
+    initializer 'psique.action_controller' do
+      ActiveSupport.on_load :action_controller do
+        helper Psique::ApplicationHelper
       end
     end
   end

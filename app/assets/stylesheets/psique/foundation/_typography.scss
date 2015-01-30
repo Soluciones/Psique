@@ -1,32 +1,3 @@
-/*doc
----
-title: Typography
-name: typography
-category: Core
----
-<br/>
-##Headings
-
-All HTML headings, `<h1>` through `<h6>`, are available.
-
-<h1>H1. Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
-<h2>H2. Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
-<h3>H3. Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
-<h4>H4. Lorem ipsum dolor sit amet, consectetur adipisicing</h4>
-<h5>H5. Lorem ipsum dolor sit amet, consectetur adipisicing</h5>
-<h6>H6. Lorem ipsum dolor sit amet, consectetur adipisicing</h6>
-
-<br/>
-##Body copy
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-*/
-
 @include font-face('Roboto', font-files(
 font-path('psique/roboto-regular.woff'),
 font-path('psique/roboto-regular.ttf'),

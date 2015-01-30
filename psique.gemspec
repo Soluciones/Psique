@@ -17,10 +17,9 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split($RS)
   s.test_files  = Dir['test/**/*']
 
-  s.add_development_dependency 'rails', '~> 4.1-stable'
   s.add_development_dependency 'sprockets', '~> 2.11.0'
   s.add_development_dependency 'sqlite3', '~> 1.3.10'
-  s.add_development_dependency 'hologram', '~> 1.2.0'
+  s.add_dependency 'rails'
 
   s.add_dependency 'sass-rails', '~> 4.0.1'
   s.add_dependency 'compass-rails', '~> 2.0.1'
