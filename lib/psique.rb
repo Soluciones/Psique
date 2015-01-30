@@ -1,8 +1,6 @@
-require 'sass-rails'
-require 'compass-rails'
-require 'normalize-scss'
-require 'breakpoint'
-require 'susy'
 require 'haml'
-require 'font-awesome-rails'
+require 'bourbon'
 require 'psique/engine'
+
+module Psique
+end

@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     psique (0.0.1)
+      bourbon
       rails
 
 GEM
@@ -43,6 +44,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    bourbon (4.1.1)
+      sass (~> 3.3)
+      thor
     builder (3.2.2)
     erubis (2.7.0)
     globalid (0.3.0)
@@ -88,6 +92,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    sass (3.4.10)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
