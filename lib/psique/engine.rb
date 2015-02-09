@@ -7,5 +7,9 @@ module Psique
         helper Psique::ApplicationHelper
       end
     end
+
+    initializer 'psique.assets.precompile' do |app|
+      app.config.assets.precompile += %w(psique/documentation.css psique/documentation.js psique/psique.js psique/psique.css)
+    end
   end
 end

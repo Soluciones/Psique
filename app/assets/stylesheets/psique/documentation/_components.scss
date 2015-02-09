@@ -1,0 +1,63 @@
+// *************************************
+//
+//   Structures
+//   -> Documentation’s modules and UI
+//
+// *************************************
+
+// -------------------------------------
+//   Horizontal Menu
+// -------------------------------------
+
+.menu { text-align: right; }
+
+// ----- Menu items ----- //
+
+.menu-item {
+  display: inline-block;
+  font-size: .9em;
+  margin-left: 1em;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// -------------------------------------
+//   Search form
+// -------------------------------------
+
+.searcher {
+  @include position(relative);
+
+  [type='search'] {
+    @include box-sizing(border-box);
+    border: 0;
+    color: #000;
+    font-size: .8em;
+    padding: 1em 7em 1em 1em;
+    width: 100%;
+  }
+
+  button {
+    @include position(absolute, 10% .35em nil nil);
+    background: #53c597;
+    border: 0;
+    font-size: .8em;
+    height: 80%;
+    padding: .25em 1em;
+    text-transform: uppercase;
+  }
+}
+
+
+// -------------------------------------
+//   Logo list
+// -------------------------------------
+
+.logo-list {
+  @extend %horizontal-list;
+  > li { margin-right: 2.5em; }
+}

@@ -18,7 +18,11 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails'
+  s.add_dependency 'sass-rails'
+  s.add_dependency 'normalize-rails'
+  s.add_dependency 'haml'
   s.add_dependency 'bourbon'
+  s.add_dependency 'neat'
 
   s.add_development_dependency 'sqlite3'
 end

@@ -1,0 +1,38 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Vertical align ----- //
+// -> Centering an element in the middle
+
+@mixin vertical-align {
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+}
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Horizontal list ----- //
+
+%horizontal-list {
+  padding: 0;
+  > li { display: inline-block; }
+}
+
+// -------------------------------------
+//   Animations
+// -------------------------------------

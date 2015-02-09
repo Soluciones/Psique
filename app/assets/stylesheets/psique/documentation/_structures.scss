@@ -1,0 +1,29 @@
+// *************************************
+//
+//   Structures
+//   -> Documentation’s modules and UI
+//
+// *************************************
+
+// -------------------------------------
+//   Header
+// -------------------------------------
+
+.header {
+  background-color: $header-background-color;
+  height: 50px;
+  min-width: $max-width;
+  .logo { @include vertical-align; }
+}
+
+// -------------------------------------
+//   Welcome
+// -------------------------------------
+
+.welcome {
+  background-color: #53c597;
+  color: #fff;
+  margin-bottom: 4em;
+  min-width: $max-width;
+  padding: 3em 0;
+}

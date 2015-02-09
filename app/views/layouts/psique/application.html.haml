@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Styleguide
+    = stylesheet_link_tag    'psique/documentation', media: 'all'
+    = javascript_include_tag 'psique/documentation'
+    = csrf_meta_tags
+  %body
+    = render 'psique/documentation/shared/header'
+    = yield

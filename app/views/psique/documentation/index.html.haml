@@ -1,0 +1,64 @@
+.welcome
+  .grid
+    .col-2= image_tag('psique/documentation/shell.svg')
+
+    .col-7
+      %h3 Welcome to Emergia style guide
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+
+    .col-3
+      %p You know you're gonna search?
+      = form_tag '#', method: :get, class: 'searcher' do
+        = search_field_tag 'search', nil, placeholder: 'Search for...'
+        = button_tag 'Search'
+
+.main.grid
+  %h2.title Documentation
+  %p
+    If is the first time you see this guide go to
+    = link_to 'first steps.', '#'
+  %p
+    If you have worked previously with this guide, or you has configured all the things you need to begin your work,
+    check the next links:
+  %ul.unindented.unstyled
+    %li= link_to 'HAML Structure files', '#'
+    %li= link_to 'SASS Variables and styles', '#'
+    %li= link_to 'Javascript functions', '#'
+    %li= link_to 'Other Stuff', '#'
+  %p Have you any questions? See the #{ link_to('FAQ', '#') } section.
+
+  %h2.title First Steps
+  %p The first things you should know to using this guide, are this:
+  %p We use the following technologies for this project:
+  %ul.logo-list
+    %li= link_to image_tag('psique/documentation/git-logo.png'), 'http://git-scm.com/'
+    %li= link_to image_tag('psique/documentation/rails-logo.png'), 'http://rubyonrails.org/'
+    %li= link_to image_tag('psique/documentation/haml-logo.png'), 'http://haml.info/'
+    %li= link_to image_tag('psique/documentation/sass-logo.png'), 'http://compass-style.org/install/'
+  %p If you have everything up to date, well we can continue with the download of repository.
+
+
+  %h2.title Local configuration and installation
+  %p Follow the next steps to configure project in your machine:
+
+  %h4 1. Open up your terminal and copy the following lines:
+
+  %pre
+    %code
+      :preserve
+        $ cd path/project/folder
+        $ git clone https://github.com/Soluciones/Psique.git
+
+  %h4 2. Start services:
+  %pre
+    %code
+      :preserve
+        $ cd Psique/test/dummy/
+        $ rails s
+
+  %h4 3. Browser Steps
+  %p
+    The terminal will display a url, you have to navigate to that url.
+    %b (Should be like "http://localhost:3000").

@@ -1,0 +1,67 @@
+// *************************************
+//
+//   Documentation
+//   -> Styles to print the guide
+//
+// *************************************
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+@import 'documentation/variables';
+
+// -------------------------------------
+//   Vendor
+// -------------------------------------
+
+@import 'psique';
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+@import 'documentation/components';
+
+// -------------------------------------
+//   Structures
+// -------------------------------------
+
+@import 'documentation/structures';
+
+// -------------------------------------
+//   Inbox
+// -------------------------------------
+
+.title {
+  border-bottom: 1px solid #808080;
+  margin-top: 2em;
+}
+
+pre {
+  background-color: #272822;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 1em;
+}
+
+.main {
+  margin-bottom: 2em;
+}
+
+a {
+  color: #21689d;
+}
+
+ul > li { line-height: 1.5em; }
+
+.unindented {
+  padding: 0;
+}
+
+.unstyled {
+  list-style: none;
+}
