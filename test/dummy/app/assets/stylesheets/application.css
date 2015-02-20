@@ -11,6 +11,6 @@
  * file per style scope.
  *
  *= require_tree .
- *= require psique/styleguide
+ *= require psique/psique
  *= require_self
  */
