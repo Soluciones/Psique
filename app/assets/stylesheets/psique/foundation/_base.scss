@@ -9,9 +9,9 @@
 //   Block Content
 // -------------------------------------
 
-// ----- Input search ----- //
+// ----- Text inputs ----- //
 
-input[type='search'] {
+#{$all-text-inputs} {
   @include box-sizing(border-box);
 }
 

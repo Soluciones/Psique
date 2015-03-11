@@ -5,6 +5,10 @@
 //
 // *************************************
 
+// -------------------------------------
+//   Base
+// -------------------------------------
+
 .panel {
   background-color: #f1f1f1;
 }
@@ -16,14 +20,14 @@
 // ----- Header ----- //
 
 .panel-header {
-  background-color: #a2baca;
+  background-color: $casper;
   color: #fff;
   font-weight: bold;
   padding: .5rem 1rem;
   position: relative;
 
   &:before {
-    @include triangle(20px, #a2baca, down);
+    @include triangle(20px, $casper, down);
     bottom: -8px;
     content: '';
     left: 100px;
