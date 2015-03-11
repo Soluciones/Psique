@@ -1,0 +1,71 @@
+// *************************************
+//
+//   Button
+//   -> Clickable control
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+%btn {
+  @include appearance(none);
+  @include linear-gradient(lighten($matisse, 20), $matisse);
+  background-color: $matisse;
+  border: 1px solid $matisse;
+  border-radius: 5px;
+  box-shadow: 0 -2px 0 0 rgba(#fff, .15) inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: .95;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Hierarchy ----- //
+
+// Primary
+
+.btn--a {
+  @extend %btn;
+}
+
+// ----- Sizes ----- //
+
+// Small
+
+.btn--s {
+  @extend %btn;
+  font-size: .9em;
+  padding: .45em 1em;
+}
+
+// Large
+
+.btn--l {
+  @extend %btn;
+  font-size: 1.1em;
+  padding: .65em 2em;
+}
