@@ -1,0 +1,69 @@
+// *************************************
+//
+//   Mobile
+//   -> Basic skeleton for mobile
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.mobile {
+  overflow: hidden;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Wrapper ----- //
+
+.mobile-wrapper {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+  @include align-items(stretch);
+  @include align-content(stretch);
+  height: 100%;
+  width: 100%;
+}
+
+// ----- Menu ----- //
+
+.mobile-menu {
+  @include backface-visibility(hidden);
+  display: block;
+  height: 100%;
+  position: fixed;
+  width: 300px;
+  z-index: -1;
+}
+
+// ----- Page ----- //
+
+.mobile-page {
+  @include transition(transform .2s ease);
+  @include flex(1);
+  @include backface-visibility(hidden);
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Active ----- //
+
+.is-active {
+
+  // Menu active
+
+  .mobile-menu {  z-index: 0; }
+
+  // Page active
+
+  .mobile-page {
+    @include transform(translateX(300px));
+    * { pointer-events: none; }
+  }
+}
