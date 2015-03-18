@@ -7,29 +7,36 @@ do ($ = jQuery, window, document) ->
 
 	class Plugin
 		constructor: (@element, options) ->
-      @settings = $.extend {}, defaults, options
-      @_defaults = defaults
-      @_name = pluginName
-      @init()
+			@settings = $.extend {}, defaults, options
+			@_defaults = defaults
+			@_name = pluginName
+			@init()
 
 		init: ->
-      menu = $(@element).data(@settings.menu)
-      page = $(@element).data(@settings.page)
+			$divs = @setup()
+			$(@element).on click: => @toggle()
+			$divs.page.on click: => @close()
+			$(window).on resize: => @resize($divs.page)
 
-      @setup(menu, page)
-      $(@element).on click: => @toggle(menu, page)
-      $(page).on click: => @close()
+		setup: ->
+			$parts =
+				menu: $ $(@element).data(@settings.menu)
+				page: $ $(@element).data(@settings.page)
 
-    setup: (menu, page) ->
-      $(menu).addClass('mobile-menu')
-      $(page).addClass('mobile-page')
-             .wrap('<div class="mobile-wrapper"/>')
+			$parts.menu.addClass('mobile-menu')
+			$parts.page.addClass('mobile-page')
 
-		toggle: (menu, page) ->
-      $('body').toggleClass('is-active')
+			@resize($parts.page)
+			$parts
+
+		toggle: ->
+			$('body').toggleClass('is-active')
 
 		close: ->
-      $('body').removeClass('is-active')
+			$('body').removeClass('is-active')
+
+		resize: ($item) ->
+			$item.css('min-height', window.innerHeight)
 
 	$.fn[pluginName] = (options) ->
 		@each ->

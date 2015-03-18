@@ -10,33 +10,51 @@
 // -------------------------------------
 
 .mobile {
-  overflow: hidden;
+  background: $matisse;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
 }
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-// ----- Wrapper ----- //
+// ----- Header ----- //
 
-.mobile-wrapper {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(flex-start);
-  @include align-items(stretch);
-  @include align-content(stretch);
-  height: 100%;
+.mobile-header {
+  background-color: #fff;
+  border-bottom: 2px solid $matisse;
+  height: 50px;
+  overflow: hidden;
+  padding: 0 .5em;
+  position: fixed;
   width: 100%;
+  z-index: 1000;
+
+  .logo {
+    display: block;
+    height: em(24px);
+    margin: em(13px) auto;
+  }
 }
 
 // ----- Menu ----- //
 
 .mobile-menu {
   @include backface-visibility(hidden);
+  @include transition(opacity .001s linear .2s);
   display: block;
   height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  padding-top: 50px;
+  pointer-events: none;
   position: fixed;
-  width: 300px;
+  top: 0;
+  width: $mobile-menu-width;
   z-index: -1;
 }
 
@@ -44,8 +62,10 @@
 
 .mobile-page {
   @include transition(transform .2s ease);
-  @include flex(1);
   @include backface-visibility(hidden);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+  padding: 70px .5em .5em;
 }
 
 // -------------------------------------
@@ -58,12 +78,21 @@
 
   // Menu active
 
-  .mobile-menu {  z-index: 0; }
+  .mobile-menu {
+    @include transition(opacity .001s linear 0s);
+    opacity: 1;
+    pointer-events: all;
+    z-index: 0;
+  }
 
   // Page active
 
   .mobile-page {
-    @include transform(translateX(300px));
+    @include transform(translateX($mobile-menu-width));
     * { pointer-events: none; }
   }
+
+  // Mobile body
+
+  &.mobile { overflow: hidden; }
 }
