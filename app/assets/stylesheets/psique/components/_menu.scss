@@ -1,0 +1,45 @@
+// *************************************
+//
+//   Menu
+//   -> Space for user navigation
+//
+// *************************************
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Lateral ----- //
+
+.menu--lateral {
+  background: $matisse;
+  display: none;
+}
+
+.menu-item {
+  @include appearance(none);
+  background-color: $matisse;
+  border-bottom: 1px solid darken($matisse, 15%);
+  color: #fff;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+
+  .icon {
+    position: absolute;
+    right: 1em;
+  }
+}
+
+.menu-toggle {
+  background: none;
+  border: 0;
+  margin: em(11px) auto;
+
+  &:focus { outline: 0; }
+
+  .icon {
+    color: $matisse;
+    font-size: em(28px);
+  }
+}
