@@ -1,0 +1,17 @@
+-# <%= ui_element('patata') %>
+
+%header.mobile-header
+  .container
+    .col-3
+      %button{ class: 'js-menu-toggle menu-toggle', data: { target: '#menu1', page: '#main' } }
+        = fa_icon 'navicon', class: 'icon'
+    .col-6
+      = image_tag 'logo-mobile.jpg', class: 'logo'
+
+%nav{ id: 'menu1', role: 'navigation', class: 'menu--lateral' }
+  - (1..5).each do |enlace|
+    = link_to "##{enlace}", class: 'menu-item' do
+      = fa_icon 'angle-double-down', text: "Item #{enlace}", right: true, class: 'icon'
+
+#main
+  = image_tag 'mockup.png', class: 'logo'

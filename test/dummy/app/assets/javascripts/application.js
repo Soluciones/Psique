@@ -12,3 +12,7 @@
 //
 //= require_tree .
 //= require psique/psique
+
+$(".js-menu-toggle").menuMobile({
+  // debug: true
+});
