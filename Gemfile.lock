@@ -4,6 +4,7 @@ PATH
     psique (1.0.0)
       bourbon
       coffee-rails
+      font-awesome-rails
       haml
       neat
       normalize-rails
@@ -62,6 +63,8 @@ GEM
     coffee-script-source (1.9.1)
     erubis (2.7.0)
     execjs (2.4.0)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     haml (4.0.6)
@@ -99,7 +102,7 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.5)
+    rails-dom-testing (1.0.6)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)

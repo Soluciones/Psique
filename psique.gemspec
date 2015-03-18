@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails'
   s.add_dependency 'coffee-rails'
   s.add_dependency 'normalize-rails'
+  s.add_dependency 'font-awesome-rails'
   s.add_dependency 'haml'
   s.add_dependency 'bourbon'
   s.add_dependency 'neat'
