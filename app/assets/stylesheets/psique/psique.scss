@@ -56,18 +56,6 @@
   display: none;
 }
 
-.dropdown {
-  li {
-    @include appearance(none);
-    background-color: #4e4e4e;
-    border-bottom: 1px solid #666;
-    color: #fff;
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-  }
-}
-
 ul {
   margin: 0;
   padding: 0;

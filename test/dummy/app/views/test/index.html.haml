@@ -1,27 +1,10 @@
--# <%= ui_element('patata') %>
+- menu = { id: 'menu1', target: 'main', searcher: true,
+           items: [{ name: 'Blogs', url: '#', submenu: [{ name: 'Principal', url: '#' }] }, { name: 'Foros', url: root_path }] }
 
 %header.mobile-header
   .container
-    .col-3
-      %button{ class: 'js-menu-toggle menu-toggle', data: { target: '#menu1', page: '#main' } }
-        = fa_icon 'navicon', class: 'icon'
-    .col-6
-      = image_tag 'logo-mobile.jpg', class: 'logo'
-
-%nav{ id: 'menu1', role: 'navigation', class: 'menu--lateral' }
-  %form.search
-    %input{ type: 'search', class: 'form-input', placeholder: 'Buscar...' }
-    %button{ class: 'search-button' }
-      = fa_icon 'search', class: 'icon'
-
-  %ul
-    - (1..5).each do |enlace|
-      %li.has-dropdown
-        = link_to "##{enlace}", class: 'menu-item' do
-          = fa_icon 'angle-double-down', text: "Item #{enlace}", right: true, class: 'icon'
-        %ul.dropdown
-          %li uno
-          %li dos
+    .col-3= ui_element('navigation/mobile', options: menu)
+    .col-6= image_tag 'logo-mobile.jpg', class: 'logo'
 
 #main
   = image_tag 'mockup.png', class: 'logo'

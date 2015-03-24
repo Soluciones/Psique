@@ -18,11 +18,14 @@
   .menu-item {
     @include appearance(none);
     background-color: $matisse;
-    border-bottom: 1px solid darken($matisse, 15%);
-    color: #fff;
-    display: block;
-    padding: 1em;
-    text-decoration: none;
+
+    a {
+      border-bottom: 1px solid darken($matisse, 15%);
+      color: #fff;
+      display: block;
+      padding: 1em;
+      text-decoration: none;
+    }
 
     .icon {
       @include transition(transform .2s ease);
@@ -70,4 +73,11 @@
   font-size: 22px;
   outline: 0;
   text-align: right;
+}
+
+.has-dropdown {
+  .menu-item {
+    background-color: #4e4e4e;
+    a { border-bottom: 1px solid #666; }
+  }
 }

@@ -23,6 +23,7 @@ do ($ = jQuery, window, document) ->
 				menu: $ $(@element).data(@settings.menu)
 				page: $ $(@element).data(@settings.page)
 
+			$parts.menu.appendTo('body')
 			$parts.menu.addClass('mobile-menu')
 			$parts.page.addClass('mobile-page')
 
