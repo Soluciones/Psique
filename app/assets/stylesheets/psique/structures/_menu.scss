@@ -1,0 +1,73 @@
+// *************************************
+//
+//   Menu
+//   -> Space for user navigation
+//
+// *************************************
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Lateral ----- //
+
+.menu--lateral {
+  background: $matisse;
+  display: none;
+
+  .menu-item {
+    @include appearance(none);
+    background-color: $matisse;
+    border-bottom: 1px solid darken($matisse, 15%);
+    color: #fff;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+
+    .icon {
+      @include transition(transform .2s ease);
+      position: absolute;
+      right: 1em;
+    }
+  }
+}
+
+.menu-toggle {
+  background: none;
+  border: 0;
+  margin: em(11px) auto;
+
+  &:focus { outline: 0; }
+
+  .icon {
+    color: $matisse;
+    font-size: em(28px);
+  }
+}
+
+.search {
+  @include outer-container;
+  background-color: #2e2e2e;
+  height: 50px;
+  overflow: hidden;
+  padding: .65em .85em;
+
+  .form-input {
+    @include span-columns(10);
+    background-color: #4e4e4e;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    height: 30px;
+  }
+}
+
+.search-button {
+  @include span-columns(2);
+  background-color: #2e2e2e;
+  border: 0;
+  color: #fff;
+  font-size: 22px;
+  outline: 0;
+  text-align: right;
+}
