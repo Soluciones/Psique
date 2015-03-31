@@ -18,10 +18,17 @@ $matisse: #21689d;
 $seashell: #f1f1f1;
 $vermilion: #fa4a00;
 
+// ----- Structures ----- //
+
+// Offcanvas
+
+$offcanvas-menu-background: $matisse;
+$offcanvas-page-background: #fff;
+
 // -------------------------------------
 //   Structures
 // -------------------------------------
 
-// ----- Mobile menu ----- //
+// ----- Offcanvas ----- //
 
-$mobile-menu-width: em(260px);
+$offcanvas-width: em(260px);

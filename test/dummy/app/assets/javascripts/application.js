@@ -13,6 +13,6 @@
 //= require_tree .
 //= require psique/psique
 
-$(".js-menu-toggle").menuMobile({
-  // debug: true
-});
+// $('body').offCanvas({
+//   dismiss: '[data-dismiss="666"]'
+// });
