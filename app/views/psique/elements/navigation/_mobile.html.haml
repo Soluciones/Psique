@@ -1,11 +1,12 @@
-%button{ class: 'js-menu-toggle menu-toggle', data: { target: "##{options[:id]}", page: "##{options[:target]}" } }
+%button{ class: 'menu-toggle', data: { offcanvas: { menu: "##{options[:id]}", page: "##{options[:target]}" } } }
   = fa_icon 'navicon', class: 'icon'
 
-%nav{ id: options[:id], role: 'navigation', class: 'menu--lateral' }
+%nav{ id: options[:id], role: 'navigation', style: 'display: none' }
   - if options[:searcher]
     %form.search
       %input{ type: 'search', class: 'form-input', placeholder: 'Buscar...' }
       %button{ class: 'search-button' }
         = fa_icon 'search', class: 'icon'
 
-  %ul= render partial: 'psique/elements/navigation/item', collection: options[:items]
+  %ul.menu.menu--side
+    = render partial: 'psique/elements/navigation/item', collection: options[:items]

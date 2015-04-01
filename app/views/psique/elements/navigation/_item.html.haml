@@ -1,7 +1,7 @@
-%li.menu-item{ class: ('has-dropdown' if item[:submenu]) }
+%li.menu-item
   = link_to item[:url] do
     = item[:name]
-    = fa_icon 'angle-double-down', class: 'icon' if item[:submenu]
+    = fa_icon 'angle-double-down', class: 'poar' if item[:submenu]
 
   - if item[:submenu]
-    %ul.dropdown= render partial: 'psique/elements/navigation/item', collection: item[:submenu]
+    %ul.menu.menu-sub= render partial: 'psique/elements/navigation/item', collection: item[:submenu]

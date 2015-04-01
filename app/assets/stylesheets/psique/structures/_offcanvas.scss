@@ -26,6 +26,7 @@
   @include backface-visibility(hidden);
   @include transition(opacity .001s linear .2s);
   background: $offcanvas-menu-background;
+  display: block !important;
   height: 100%;
   opacity: 0;
   overflow-y: auto;

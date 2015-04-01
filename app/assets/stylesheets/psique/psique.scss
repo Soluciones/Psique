@@ -35,21 +35,20 @@
 //   Structures
 // -------------------------------------
 
-// @import 'structures/menu';
+@import 'structures/mobile';
+@import 'structures/menu';
 @import 'structures/offcanvas';
 
 // -------------------------------------
 //   Foundation - Tools
 // -------------------------------------
 
+@import 'foundation/tools';
+
 // -------------------------------------
 //   Inbox
 // -------------------------------------
 
-.has-dropdown.is-active {
-  .icon { @include transform(rotate(-90deg)) }
-  .dropdown { display: block; }
-}
 
 .dropdown {
   background-color: #4e4e4e;
