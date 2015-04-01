@@ -1,0 +1,4 @@
+= form_tag(options[:search_url], class: 'search', method: :get) do
+  = search_field_tag 'q', params[:q], class: 'form-input search-input', placeholder: 'Buscar...'
+  = button_tag '', class: 'search-button' do
+    = fa_icon 'search', class: 'icon'

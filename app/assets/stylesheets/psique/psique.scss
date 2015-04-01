@@ -35,9 +35,10 @@
 //   Structures
 // -------------------------------------
 
-@import 'structures/mobile';
 @import 'structures/menu';
+@import 'structures/mobile';
 @import 'structures/offcanvas';
+@import 'structures/search';
 
 // -------------------------------------
 //   Foundation - Tools
@@ -48,14 +49,3 @@
 // -------------------------------------
 //   Inbox
 // -------------------------------------
-
-
-.dropdown {
-  background-color: #4e4e4e;
-  display: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}

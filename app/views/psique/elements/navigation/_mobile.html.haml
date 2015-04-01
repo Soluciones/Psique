@@ -3,10 +3,7 @@
 
 %nav{ id: options[:id], role: 'navigation', style: 'display: none' }
   - if options[:searcher]
-    %form.search
-      %input{ type: 'search', class: 'form-input', placeholder: 'Buscar...' }
-      %button{ class: 'search-button' }
-        = fa_icon 'search', class: 'icon'
+    = ui_element('search_box', options: options[:searcher])
 
   %ul.menu.menu--side
     = render partial: 'psique/elements/navigation/item', collection: options[:items]
