@@ -12,7 +12,3 @@
 //
 //= require_tree .
 //= require psique/psique
-
-// $('body').offCanvas({
-//   dismiss: '[data-dismiss="666"]'
-// });
