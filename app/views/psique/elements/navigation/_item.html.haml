@@ -1,7 +1,8 @@
 %li.menu-item
-  = link_to item[:url] do
+  = link_to item[:url], { title: item[:title] } do
     = item[:name]
     = fa_icon 'angle-double-down', class: 'poar' if item[:submenu]
 
   - if item[:submenu]
-    %ul.menu.menu-sub= render partial: 'psique/elements/navigation/item', collection: item[:submenu]
+    %ul.menu.menu-sub{ class: ('is-active' if item[:active]) }
+      = render partial: 'psique/elements/navigation/item', collection: item[:submenu]
