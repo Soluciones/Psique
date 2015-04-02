@@ -1,0 +1,45 @@
+// *************************************
+//
+//   Search
+//   -> Styles for a search box
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.search {
+  @include outer-container;
+  background-color: $search-background;
+  height: 50px;
+  overflow: hidden;
+  padding: .65em .85em;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Search input ----- //
+
+.search-input {
+  @include span-columns(10);
+  background-color: $search-input-background;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  height: 30px;
+}
+
+// ----- Search button ----- //
+
+.search-button {
+  @include span-columns(2);
+  background-color: $search-button-background;
+  border: 0;
+  color: #fff;
+  font-size: 22px;
+  outline: 0;
+  text-align: right;
+}

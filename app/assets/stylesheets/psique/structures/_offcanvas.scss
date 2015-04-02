@@ -1,0 +1,79 @@
+// *************************************
+//
+//   Offcanvas
+//   -> Setting up an off-canvas layout
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.offcanvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Menu ----- //
+
+.offcanvas-menu {
+  @include backface-visibility(hidden);
+  @include transition(opacity .001s linear .2s);
+  background: $offcanvas-menu-background;
+  display: block !important;
+  height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: $offcanvas-width;
+  z-index: -1;
+}
+
+// ----- Page ----- //
+
+.offcanvas-page {
+  @include transition(transform .2s ease);
+  @include backface-visibility(hidden);
+  background: $offcanvas-page-background;
+  box-shadow: 0 0 em(8px) rgba(0, 0, 0, .5);
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Is open ----- //
+
+.offcanvas.is-open {
+
+  // Offcanvas is open
+
+  overflow: hidden;
+
+  // Menu is open
+
+  .offcanvas-menu {
+    @include transition(opacity .001s linear 0s);
+    opacity: 1;
+    pointer-events: all;
+    z-index: 0;
+  }
+
+  // Page is open
+
+  .offcanvas-page {
+    @include transform(translateX($offcanvas-width));
+    * { pointer-events: none; }
+  }
+}

@@ -1,0 +1,9 @@
+%button{ class: 'btn-menu', data: { offcanvas: { menu: "##{options[:id]}", page: "##{options[:target]}" } } }
+  = fa_icon 'navicon', class: 'icon'
+
+%nav{ id: options[:id], role: 'navigation', style: 'display: none' }
+  - if options[:searcher]
+    = ui_element('search_box', options: options[:searcher])
+
+  %ul.menu.menu--side
+    = render partial: 'psique/elements/navigation/item', collection: options[:items]

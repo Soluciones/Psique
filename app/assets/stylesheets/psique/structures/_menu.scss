@@ -1,0 +1,73 @@
+// *************************************
+//
+//   Menu
+//   -> Space for user navigation
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Side ----- //
+
+.menu--side {
+  background: $menu--side-background;
+
+  // Scaffolding
+
+  .menu-item {
+    display: block;
+    position: relative;
+    a { border-bottom: 1px solid darken($menu--side-background, 15%); }
+    .fa { right: 1em; }
+  }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Menu item ----- //
+
+.menu-item {
+  @include appearance(none);
+  color: $menu-item-color;
+  display: inline-block;
+
+  > a {
+    color: $menu-item-color;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+  }
+}
+
+// ----- Submenu ----- //
+
+.menu-sub {
+  background-color: $menu-sub-background;
+  display: none;
+
+  .menu-item {
+    background-color: $menu-sub-background;
+    a { border-bottom-color: lighten($menu-sub-background, 10%); }
+  }
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Is active ----- //
+
+.menu-sub.is-active {  display: block; }

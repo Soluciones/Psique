@@ -17,3 +17,36 @@ $kashmir: #486197;
 $matisse: #21689d;
 $seashell: #f1f1f1;
 $vermilion: #fa4a00;
+
+// ----- Structures ----- //
+
+// Offcanvas
+
+$offcanvas-menu-background: $matisse;
+$offcanvas-page-background: #fff;
+
+// Menu
+
+$menu--side-background: $matisse;
+$menu-sub-background: #4e4e4e;
+$menu-item-color: #fff;
+
+// Search
+
+$search-background: #2e2e2e;
+$search-input-background: #4e4e4e;
+$search-button-background: #2e2e2e;
+
+// ----- Components ----- //
+
+// Button menu toggle
+
+$btn-menu-color: $matisse;
+
+// -------------------------------------
+//   Structures
+// -------------------------------------
+
+// ----- Offcanvas ----- //
+
+$offcanvas-width: em(260px);
