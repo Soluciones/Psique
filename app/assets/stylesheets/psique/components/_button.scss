@@ -9,7 +9,7 @@
 //   Base
 // -------------------------------------
 
-%btn {
+.btn {
   @include appearance(none);
   @include linear-gradient(lighten($matisse, 20), $matisse);
   background-color: $matisse;
