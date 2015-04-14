@@ -1,0 +1,10 @@
+%span
+  = link_to options[:menu], ''
+  = fa_icon 'caret-down icon-menu-lvl2', class: 'icon'
+  %span.current-submenu
+    = options[:current]
+.menu-options-lvl2
+  %ul
+    - options[:options].each do |option|
+      %li
+        = link_to option [:name], option[:url], title: option[:name]
