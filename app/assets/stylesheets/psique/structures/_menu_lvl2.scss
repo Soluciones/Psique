@@ -11,3 +11,27 @@
     }
   }
 }
+
+.menu-lvl2--caret{
+  display:inline-block;
+  vertical-align:top;
+  width:20%;
+}
+.menu-lvl2--current{
+  display:inline-block;
+  vertical-align:top;
+  width:77%;  
+  background: $matisse;
+  height: 43px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  span{
+    color:white;
+    font-weight: bold;
+    font-family: 'Roboto';
+    position:relative;
+    top:25%;
+    left:10%;
+  }
+}
