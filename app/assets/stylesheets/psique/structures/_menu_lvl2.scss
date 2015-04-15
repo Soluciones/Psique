@@ -1,8 +1,12 @@
 .menu-options-lvl2 {
   display: none;
   ul {
-  	padding-left: 0.7em;
-    list-style-type: none;
+      padding-left: 0.7em;
+      padding-top: 0.7em;
+      list-style-type: none;
+      border-top: 1px solid white;
+      position: relative;
+      top: -3px;
     li {
     	margin-bottom: 0.5em;
     	margin-top: 0.5em;
@@ -15,23 +19,49 @@
 .menu-lvl2--caret{
   display:inline-block;
   vertical-align:top;
-  width:20%;
+  width:24%;
+  position:relative;
+  a{
+    padding-left:.8em;
+    font-weight:bold;
+    position:absolute;
+    top:2px;
+  }
 }
 .menu-lvl2--current{
   display:inline-block;
   vertical-align:top;
-  width:77%;  
+  width:71%;  
   background: $matisse;
-  height: 43px;
+  height: 42px;
   position: absolute;
   right: 0;
   top: 0;
-  span{
-    color:white;
-    font-weight: bold;
-    font-family: 'Roboto';
-    position:relative;
-    top:25%;
-    left:10%;
+  .line-divider{
+    width:1px;
+    background:white;
+    position: absolute;
+    z-index: 99999999;
+    left: -20px;
+    height: 43px;
+    i{margin: 14px 10px; color:white;}
   }
+    &::before{
+    content: '';
+    height: 0;
+    width: 0;
+    z-index: 9999999;
+    position: absolute;
+    border-bottom: 22px solid transparent;
+    border-left: 15px solid #a2baca;
+    border-top: 21px solid transparent;
+  }
+    span{
+      color:white;
+      font-weight: bold;
+      font-family: 'Roboto';
+      position:relative;
+      top:23%;
+      left:15%;
+    }
 }

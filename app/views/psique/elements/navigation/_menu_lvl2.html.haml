@@ -1,7 +1,8 @@
 .menu-lvl2--caret
   = link_to options[:menu], ''
-  = fa_icon 'caret-down icon-menu-lvl2', class: 'icon'
 .menu-lvl2--current
+  .line-divider
+    = fa_icon 'caret-down icon-menu-lvl2', class: 'icon'
   %span
     = options[:current]
 .menu-options-lvl2
