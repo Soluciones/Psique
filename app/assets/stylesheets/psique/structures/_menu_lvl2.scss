@@ -1,12 +1,12 @@
 .menu-options-lvl2 {
-  display: none;
+  position: relative;
+  top: 9px;
   ul {
       padding-left: 0.7em;
       padding-top: 0.7em;
       list-style-type: none;
       border-top: 1px solid white;
-      position: relative;
-      top: -3px;
+      margin: 0;
     li {
     	margin-bottom: 0.5em;
     	margin-top: 0.5em;
@@ -15,7 +15,6 @@
     }
   }
 }
-
 .menu-lvl2--caret{
   display:inline-block;
   vertical-align:top;
@@ -25,7 +24,7 @@
     padding-left:.8em;
     font-weight:bold;
     position:absolute;
-    top:2px;
+    top:-2px;
   }
 }
 .menu-lvl2--current{
@@ -52,7 +51,7 @@
     width: 0;
     z-index: 9999999;
     position: absolute;
-    border-bottom: 22px solid transparent;
+    border-bottom: 21px solid transparent;
     border-left: 15px solid #a2baca;
     border-top: 21px solid transparent;
   }
@@ -64,4 +63,7 @@
       top:23%;
       left:15%;
     }
+}
+.menu--display{
+  height:auto !important;
 }
