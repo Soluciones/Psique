@@ -1,4 +1,4 @@
-$('#caret-trigger').click (event) ->
+$('.menu-lvl2--current .icon').click (event) ->
   icon = event.target
   icon.classList.toggle('fa-caret-down')
   icon.classList.toggle('fa-caret-up')

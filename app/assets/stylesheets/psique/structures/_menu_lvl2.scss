@@ -2,84 +2,84 @@ $menu_lvl2_height: 43px;
 
 .menu-lvl2 {
   background: $casper;
+  height: $menu_lvl2_height;
+  left: 0;
   list-style-type: none;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: $menu_lvl2_height;
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .menu-options-lvl2 {
   position: relative;
   top: 24px;
   ul {
-      padding-left: 0.7em;
-      padding-top: 0.7em;
-      list-style-type: none;
-      border-top: 1px solid white;
-      margin: 0;
+    border-top: 1px solid white;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0.7em;
+    padding-top: 0.7em;
     li {
+      display: inline-block;
       margin-bottom: 0.5em;
       margin-top: 0.5em;
       width: 49%;
-      display: inline-block;
     }
   }
 }
 
 .menu-lvl2--caret {
   display: inline-block;
+  position: relative;
   vertical-align: top;
   width: 24%;
-  position: relative;
   a {
+    font-weight: bold;
     padding-left: .8em;
     padding-top: 1.8em;
-    font-weight: bold;
     position: absolute;
     top: -15px;
   }
 }
 
 .menu-lvl2--current {
-  display: inline-block;
-  vertical-align: top;
-  width: 71%;
   background: $matisse;
+  display: inline-block;
   height: $menu_lvl2_height;
   position: absolute;
   right: 0;
   top: 0;
+  vertical-align: top;
+  width: 71%;
   .line-divider {
-    width: 1px;
     background: white;
-    position: absolute;
-    z-index: 99999999;
-    left: -20px;
     height: 100%;
     i{margin: 14px 10px; color:white;}
+    left: -20px;
+    position: absolute;
+    width: 1px;
+    z-index: 99999999;
   }
   &::before {
-    content: '';
-    height: 0;
-    width: 0;
-    z-index: 9999999;
-    position: absolute;
     border-bottom: 21px solid transparent;
     border-left: 15px solid #a2baca;
     border-top: 21px solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 9999999;
   }
   span {
     color: white;
+    font-family: 'Roboto';
     font-style: italic;
     font-weight: bold;
-    font-family: 'Roboto';
+    left: 15%;
     position: relative;
     top: 30%;
-    left: 15%;
   }
 }
 
