@@ -1,8 +1,9 @@
 %li.menu-item
-  = link_to item[:url], { title: item[:title], class: ('has-icon' if item[:submenu]) } do
-    = item[:name]
   - if item[:submenu]
-    = fa_icon 'angle-double-down', class: 'poar', data: { accordion: '' }
+    = link_to  item[:name], item[:url], { title: item[:title], class: 'has-icon' }
+    = fa_icon 'caret-down', class: 'poar', data: { accordion: '' }
+  - else
+    = link_to item[:name], item[:url], { title: item[:title] }
 
   - if item[:submenu]
     %ul.menu.menu-sub{ class: ('is-active' if item[:active]) }

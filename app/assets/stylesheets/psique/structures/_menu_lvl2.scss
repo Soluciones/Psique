@@ -10,6 +10,7 @@ $menu_lvl2_height: 43px;
   overflow: hidden;
   position: fixed;
   width: 100%;
+  z-index: 99999999;
 }
 
 .menu-options-lvl2 {
@@ -56,8 +57,8 @@ $menu_lvl2_height: 43px;
   .line-divider {
     background: white;
     height: 100%;
-    i{margin: 14px 10px; color:white;}
-    left: -20px;
+    i{margin: 15px 15px; color:white;}
+    left: -35px;
     position: absolute;
     width: 1px;
     z-index: 99999999;
