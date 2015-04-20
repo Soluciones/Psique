@@ -74,13 +74,17 @@ $menu_lvl2_height: 43px;
     z-index: 9999999;
   }
   span {
-    color: white;
+    color: $casper;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: bold;
     left: 15%;
     position: relative;
     top: 30%;
+
+    a, a:visited {
+      color: white;
+    }
   }
 }
 
