@@ -1,0 +1,3 @@
+[1.0.2] Changed the colors on .menu-lvl2--current span, to avoid links having the same color than background
+        Added changelog.txt
+        Added "cambio de versión" to README
