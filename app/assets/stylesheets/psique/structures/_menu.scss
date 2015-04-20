@@ -53,7 +53,12 @@
 
   .has-icon  {
     display: inline-block;
-    width: 81%;
+    width: 100%;
+    i {
+      border-left: solid 1px white;
+      margin: -18px;
+      padding: 18px 25px;
+    }
   }
 }
 
@@ -65,7 +70,10 @@
 
   .menu-item {
     background-color: $menu-sub-background;
-    a { border-bottom-color: lighten($menu-sub-background, 10%); }
+    a {
+      border-bottom-color: lighten($menu-sub-background, 10%);
+      padding-left: 2em;
+    }
   }
 }
 

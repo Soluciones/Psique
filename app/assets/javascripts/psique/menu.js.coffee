@@ -1,6 +1,7 @@
-$('[data-accordion]').on 'click', (event) ->
-  this.classList.toggle('fa-caret-down')
-  this.classList.toggle('fa-caret-up')
-  menu = this.parentNode.parentNode
-  submenu = menu.querySelector('ul')
-  $(submenu).slideToggle(450)
+$('.menu-item[data-submenu]').on 'click', (event) ->
+  if (icon = event.target).matches('i')
+    event.preventDefault()
+    submenu = this.querySelector(this.dataset.submenu)
+    icon.classList.toggle('fa-angle-double-down')
+    icon.classList.toggle('fa-angle-double-up')
+    $(submenu).slideToggle(450)
