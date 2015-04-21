@@ -38,10 +38,9 @@ $menu_lvl2_height: 43px;
   width: 24%;
   a {
     font-weight: bold;
-    padding-left: .8em;
-    padding-top: 1.8em;
+    height: $menu_lvl2_height;
+    padding: 12px 10px;
     position: absolute;
-    top: -15px;
   }
 }
 
@@ -57,7 +56,11 @@ $menu_lvl2_height: 43px;
   .line-divider {
     background: white;
     height: 100%;
-    i{margin: 15px 16px; color:white;}
+    i {
+      color:white;
+      height: 100%;
+      padding: 15px 17px;
+    }
     left: -35px;
     position: absolute;
     width: 1px;
