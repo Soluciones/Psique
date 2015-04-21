@@ -4,6 +4,10 @@
 //   -> Tag-level settings
 //
 // *************************************
+html, html a{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // -------------------------------------
 //   Block Content

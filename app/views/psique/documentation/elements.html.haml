@@ -1,0 +1,180 @@
+.welcome
+  .grid
+    .col-2= image_tag('psique/documentation/shell.svg')
+
+    .col-7
+      %h3 Welcome to Emergia style guide
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+
+    .col-3
+      %p You know you're gonna search?
+      = form_tag '#', method: :get, class: 'searcher' do
+        = search_field_tag 'search', nil, placeholder: 'Search for...'
+        = button_tag 'Search'
+
+
+.main.grid
+  %h2.title Colors
+  %p.main At the bottom of these lines, you can see the default colors that we use in our application.
+  
+  %p Blue Colors
+  .col-3
+    .color-shape.ceruleo  
+      %span $ceruleo
+    
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .ceruleo
+      class 
+  .col-3
+    .color-shape.capota  
+      %span $capota
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .capota
+      class 
+  .col-3
+    .color-shape.navy-blue  
+      %span $navy-blue
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .navy-blue
+      class 
+  
+.main.grid
+  %p Grey Colors
+  .col-3
+    .color-shape.light-grey  
+      %span $light-grey
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .light-grey
+      class 
+  .col-3
+    .color-shape.mid-grey  
+      %span $mid-grey
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .mid-grey
+      class 
+  .col-3
+    .color-shape.dark-grey  
+      %span $dark-grey        
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .dark-grey
+      class 
+
+.main.grid
+  %p Orange Colors
+  .col-3
+    .color-shape.vibrant-orange
+      %span $vibrant-orange 
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .vibrant-orange
+      class 
+  .col-3
+    .color-shape.dark-orange  
+      %span $dark-orange
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .dark-orange
+      class 
+
+.main.grid
+  %p Secondary Colors
+  .col-3
+    .color-shape.grana
+      %span $grana
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .grana
+      class 
+  .col-3
+    .color-shape.oceanic
+      %span $oceanic
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .oceanic
+      class 
+
+.main.grid
+  .col-3
+    .color-shape.dark-magenta
+      %span $dark-magenta 
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .dark-magenta
+      class 
+  .col-3
+    .color-shape.wisteria  
+      %span $wisteria
+    %p.col-box.dark-grey.codehilite
+      For backgrounds you can use 
+      %span.nc .wisteria
+      class 
+
+.grid.main
+  %h2.title Buttons
+  %p.main At the bottom of these lines, you can see the default colors that we use on our application.
+  
+  %p Buttons Shapes
+  .col-3
+    .btn--a Default Blue Button
+    %p.col-box.dark-grey.codehilite 
+      Add to your div
+      %span.nc .btn--a
+      class 
+  .col-3
+    .btn--b Default Orange Button
+    %p.col-box.dark-grey.codehilite 
+      Add to your div
+      %span.nc .btn--a
+      class 
+  .col-3
+    .btn--c Default Inactive Button
+    %p.col-box.dark-grey.codehilite 
+      Add to your div
+      %span.nc .btn--a
+      class 
+
+.grid.main
+  %p Button Sizes
+  .col-3
+    .btn--a.btn--l Large Button
+    %p.col-box.dark-grey.codehilite 
+      When your div has the class 
+      %span.nc .btn--a/b/c
+      append to this
+      %span.sc .btn--s  
+  .col-3
+    .btn--a.btn--s Small Button
+    %p.col-box.dark-grey.codehilite 
+      When your div has the class 
+      %span.nc .btn--a/b/c 
+      append to this
+      %span.sc .btn--s  
+  .col-3
+    .btn--a.btn--xs Extra Small Button
+    %p.col-box.dark-grey.codehilite 
+      When your div has the class 
+      %span.nc .btn--a/b/c
+      append to this
+      %span.sc .btn--s
+
+
+
+.grid.main
+.grid.main
+.grid.main
+.grid.main
+
+
+
+
+
+
+
