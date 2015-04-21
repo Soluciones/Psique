@@ -46,5 +46,39 @@
 @import 'foundation/tools';
 
 // -------------------------------------
+//   Vendors
+// -------------------------------------
+
+@import 'vendors/monokaicolors';
+
+
+// -------------------------------------
 //   Inbox
 // -------------------------------------
+
+
+.color-shape {
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-align: center;
+	span{
+		font-weight: bold;
+		border-radius: 3px;
+		background: white;
+		color: $dark-grey;
+		padding: 4px 15px;
+		font-size: 0.9em;
+		font-style: italic;
+	}
+}
+.col-box{
+	margin: 0;
+	padding: 13px 0 5px 10px;
+	position: relative;
+	top: -5px;
+	color: white;
+	z-index: -1;
+	border-radius: 4px;
+	font-size: .9em;
+}
+	

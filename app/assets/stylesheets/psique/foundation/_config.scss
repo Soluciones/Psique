@@ -11,23 +11,44 @@
 
 // ----- Palette ----- //
 
-$alto: #d5d5d5;
-$casper: #a2baca;
-$kashmir: #486197;
-$matisse: #21689d;
-$seashell: #f1f1f1;
-$vermilion: #fa4a00;
+$ceruleo: #afc6d4;
+$capota: #21689d;
+$navyblue: #0e4567;
+
+$light-grey: #f1f1f1;
+$mid-grey: #d5d5d5;
+$dark-grey: #3e3e3e;
+
+$vibrant-orange: #fa4a00;
+$dark-orange: #DB5322;
+
+
+
+
+// Background Shapes
+
+.ceruleo{background-color: $ceruleo;}
+.capota{background-color: $capota;}
+.navy-blue{background-color: $navyblue;}
+
+.light-grey{background-color: $light-grey;}
+.mid-grey{background-color: $mid-grey;}
+.dark-grey{background-color: $dark-grey;}
+
+.vibrant-orange{background-color: $vibrant-orange;}
+.dark-orange{background-color: $dark-orange;}
+
 
 // ----- Structures ----- //
 
 // Offcanvas
 
-$offcanvas-menu-background: $matisse;
+$offcanvas-menu-background: $capota;
 $offcanvas-page-background: #fff;
 
 // Menu
 
-$menu--side-background: $matisse;
+$menu--side-background: $capota;
 $menu-sub-background: #4e4e4e;
 $menu-item-color: #fff;
 
@@ -41,7 +62,7 @@ $search-button-background: #2e2e2e;
 
 // Button menu toggle
 
-$btn-menu-color: $matisse;
+$btn-menu-color: $capota;
 
 // -------------------------------------
 //   Structures

@@ -9,11 +9,11 @@
 //   Base
 // -------------------------------------
 
-.btn {
+%btn {
   @include appearance(none);
-  @include linear-gradient(lighten($matisse, 20), $matisse);
-  background-color: $matisse;
-  border: 1px solid $matisse;
+  @include linear-gradient(lighten($capota, 20), $capota);
+  background-color: $capota;
+  border: 1px solid $capota;
   border-radius: 5px;
   box-shadow: 0 -2px 0 0 rgba(#fff, .15) inset;
   color: #fff;
