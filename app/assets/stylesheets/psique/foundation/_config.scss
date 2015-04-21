@@ -9,7 +9,9 @@
 //   Colors
 // -------------------------------------
 
-// ----- Palette ----- //
+// ----- Palette Vars ----- //
+
+// Main Colors
 
 $ceruleo: #afc6d4;
 $capota: #21689d;
@@ -22,10 +24,16 @@ $dark-grey: #3e3e3e;
 $vibrant-orange: #fa4a00;
 $dark-orange: #DB5322;
 
+// Secondary Colors
 
+$grana: #B33135;
+$oceanic: #159775;
+$dark-magenta: #AA4992;
+$wisteria:#486197;
 
+// ----- Palette Classes ----- //
 
-// Background Shapes
+// Background Main Shapes
 
 .ceruleo{background-color: $ceruleo;}
 .capota{background-color: $capota;}
@@ -37,6 +45,13 @@ $dark-orange: #DB5322;
 
 .vibrant-orange{background-color: $vibrant-orange;}
 .dark-orange{background-color: $dark-orange;}
+
+// Background Secondary Shapes
+
+.grana{background-color: $grana;}
+.oceanic{background-color: $oceanic,}
+.dark-magenta{background-color: $dark-magenta;}
+.wisteria{background-color: $wisteria;}
 
 
 // ----- Structures ----- //

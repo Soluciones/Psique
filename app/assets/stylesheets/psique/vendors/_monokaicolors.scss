@@ -1,3 +1,5 @@
+$code-font: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+
 .codehilite{
   background-color:#272822;
   border-radius:6px;
@@ -30,7 +32,7 @@
   .s { color: #e6db74 } /* Literal.String */
   .na { color: #a6e22e } /* Name.Attribute */
   .nb { color: #f8f8f2 } /* Name.Builtin */
-  .nc { color: #a6e22e } /* Name.Class */
+  .nc { color: #a6e22e; font-family:$code-font; font-weight: bold;}  /* Name.Class */
   .no { color: #66d9ef } /* Name.Constant */
   .nd { color: #a6e22e } /* Name.Decorator */
   .ni { color: #f8f8f2 } /* Name.Entity */
@@ -49,7 +51,7 @@
   .mi { color: #ae81ff } /* Literal.Number.Integer */
   .mo { color: #ae81ff } /* Literal.Number.Oct */
   .sb { color: #e6db74 } /* Literal.String.Backtick */
-  .sc { color: #e6db74 } /* Literal.String.Char */
+  .sc { color: #e6db74; font-family:$code-font; font-weight: bold;} /* Literal.String.Char */
   .sd { color: #e6db74 } /* Literal.String.Doc */
   .s2 { color: #e6db74 } /* Literal.String.Double */
   .se { color: #ae81ff } /* Literal.String.Escape */
