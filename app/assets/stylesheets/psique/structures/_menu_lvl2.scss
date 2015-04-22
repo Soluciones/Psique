@@ -68,7 +68,7 @@ $menu_lvl2_height: 43px;
   }
   &::before {
     border-bottom: 21px solid transparent;
-    border-left: 15px solid #a2baca;
+    border-left: 15px solid $ceruleo-blue;
     border-top: 21px solid transparent;
     content: '';
     height: 0;
