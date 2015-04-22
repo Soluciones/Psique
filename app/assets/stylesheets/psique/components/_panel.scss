@@ -20,14 +20,14 @@
 // ----- Header ----- //
 
 .panel-header {
-  background-color: $ceruleo;
+  background-color: $ceruleo-blue;
   color: #fff;
   font-weight: bold;
   padding: .5rem 1rem;
   position: relative;
 
   &:before {
-    @include triangle(20px, $ceruleo, down);
+    @include triangle(20px, $ceruleo-blue, down);
     bottom: -8px;
     content: '';
     left: 100px;

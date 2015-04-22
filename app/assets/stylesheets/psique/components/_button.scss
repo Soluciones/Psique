@@ -49,10 +49,10 @@
 
 .btn--a {
   @extend %btn;
-  @include linear-gradient(lighten($capota, 20), $capota);
-  border: 1px solid $capota;
+  @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
+  border: 1px solid $capota-blue;
   &:hover{
-    @include linear-gradient(lighten($capota,10), darken($capota, 8));
+    @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
   }
 
 }
@@ -76,7 +76,7 @@
 
 // Secondary
 
-.btn--icon{
+.btn--icon {
   @extend %btn;
   .fa::before{
     padding-right:4px;
@@ -89,11 +89,12 @@
 
 // Social
 
-.btn--facebook{
-  @include linear-gradient(lighten($facebook, 8), $facebook);
+@mixin btnSocial($gradientColor, $borderColor) {
+  @include linear-gradient(lighten($gradientColor, 8), $gradientColor);
+  border: 1px solid $borderColor;
   .fa::before{
     padding: 5px 12px 5px 0px;
-    border-right: 1px solid $navyblue;
+    border-right: 1px solid $borderColor;
     position: relative;
     left: -12px;
     top: 1px;
@@ -103,45 +104,13 @@
     padding-left:3px;
   }
   &:hover{
-    @include linear-gradient(lighten($facebook,10), darken($facebook, 8));
+    @include linear-gradient(lighten($gradientColor,10), darken($gradientColor, 8));
   }
 }
-.btn--gplus{
-  @include linear-gradient(lighten($gplus, 8), $gplus);
-  border: 1px solid $grana;
-  .fa::before{
-    padding: 5px 12px 5px 0px;
-    border-right: 1px solid $grana;
-    position: relative;
-    left: -12px;
-    top: 1px;
-    vertical-align: text-top;
-  }
-  span{
-    padding-left:3px;
-  }
-  &:hover{
-    @include linear-gradient(lighten($gplus,10), darken($gplus, 8));
-  }
-}
-.btn--twitter{
-  @include linear-gradient(lighten($twitter, 8), $twitter);
-  border: 1px solid $capota;
-  .fa::before{
-    padding: 5px 12px 5px 0px;
-    border-right: 1px solid $navyblue;
-    position: relative;
-    left: -12px;
-    top: 1px;
-    vertical-align: text-top;
-  }
-  span{
-    padding-left:3px;
-  }
-  &:hover{
-    @include linear-gradient(lighten($twitter,10), darken($twitter, 8));
-  }
-}
+
+.btn--facebook { @include btnSocial($facebook-blue, $navy-blue); }
+.btn--gplus { @include btnSocial($gplus-red, $granate); }
+.btn--twitter { @include btnSocial($twitter-blue, $capota-blue); }
 
 // ----- Sizes ----- //
 
