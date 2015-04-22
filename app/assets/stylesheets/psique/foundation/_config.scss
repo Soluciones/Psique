@@ -9,25 +9,68 @@
 //   Colors
 // -------------------------------------
 
-// ----- Palette ----- //
+// ----- Palette Vars ----- //
 
-$alto: #d5d5d5;
-$casper: #a2baca;
-$kashmir: #486197;
-$matisse: #21689d;
-$seashell: #f1f1f1;
-$vermilion: #fa4a00;
+// Main Colors
+
+$ceruleo-blue: #afc6d4;
+$capota-blue: #21689d;
+$navy-blue: #0e4567;
+
+$light-grey: #f1f1f1;
+$mid-grey: #d5d5d5;
+$dark-grey: #3e3e3e;
+
+$vibrant-orange: #fa4a00;
+$dark-orange: #DB5322;
+
+// Secondary Colors
+
+$granate: #B33135;
+$oceanic-green: #159775;
+$dark-magenta: #AA4992;
+$wisteria-blue: #486197;
+
+// Social Colors
+
+$twitter-blue: #4099FF;
+$facebook-blue: #3D62B3;
+$gplus-red: #D50F0F;
+
+
+// ----- Palette Classes ----- //
+
+// Background Main Shapes
+
+.ceruleo { background-color: $ceruleo-blue; }
+.capota-blue { background-color: $capota-blue; }
+.navy-blue { background-color: $navy-blue; }
+
+.light-grey { background-color: $light-grey; }
+.mid-grey { background-color: $mid-grey;}
+.dark-grey { background-color: $dark-grey; }
+
+.vibrant-orange { background-color: $vibrant-orange; }
+.dark-orange { background-color: $dark-orange; }
+
+// Background Secondary Shapes
+
+.grana { background-color: $granate; }
+.oceanic { background-color: $oceanic-green; }
+.dark-magenta { background-color: $dark-magenta; }
+.wisteria { background-color: $wisteria-blue; }
+
 
 // ----- Structures ----- //
 
 // Offcanvas
 
-$offcanvas-menu-background: $matisse;
+$offcanvas-menu-background: $capota-blue;
 $offcanvas-page-background: #fff;
 
 // Menu
 
-$menu--side-background: $matisse;
+$menu--side-background: $capota-blue;
 $menu-sub-background: #4e4e4e;
 $menu-item-color: #fff;
 
@@ -41,7 +84,7 @@ $search-button-background: #2e2e2e;
 
 // Button menu toggle
 
-$btn-menu-color: $matisse;
+$btn-menu-color: $capota-blue;
 
 // -------------------------------------
 //   Structures

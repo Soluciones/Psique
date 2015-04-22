@@ -34,7 +34,7 @@
 // -------------------------------------
 
 .title {
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid $dark-grey;
   margin-top: 2em;
 }
 
@@ -53,7 +53,7 @@ pre {
 }
 
 a {
-  color: #21689d;
+  color: $capota-blue;
 }
 
 ul > li { line-height: 1.5em; }

@@ -9,13 +9,9 @@
 //   Base
 // -------------------------------------
 
-.btn {
+%btn {
   @include appearance(none);
-  @include linear-gradient(lighten($matisse, 20), $matisse);
-  background-color: $matisse;
-  border: 1px solid $matisse;
   border-radius: 5px;
-  box-shadow: 0 -2px 0 0 rgba(#fff, .15) inset;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -27,17 +23,6 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    opacity: .95;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: .5;
-  }
 }
 
 // ----- Button menu toggle ----- //
@@ -64,9 +49,78 @@
 
 .btn--a {
   @extend %btn;
+  @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
+  border: 1px solid $capota-blue;
+  &:hover{
+    @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
+  }
+
 }
 
+.btn--b {
+  @extend %btn;
+  @include linear-gradient(lighten($vibrant-orange, 20), $vibrant-orange);
+  border: 1px solid $dark-orange;
+  &:hover{
+    @include linear-gradient(lighten($vibrant-orange,10), darken($vibrant-orange, 8));
+  }
+}
+
+.btn--c {
+  @extend %btn;
+  background-color: $light-grey;
+  border: 1px solid $mid-grey;
+  color: $mid-grey;
+  cursor: not-allowed;
+}
+
+// Secondary
+
+.btn--icon {
+  @extend %btn;
+  .fa::before{
+    padding-right:4px;
+    vertical-align: text-top;
+  }
+  span{
+    padding-left:3px;
+  }
+}
+
+// Social
+
+@mixin btnSocial($gradientColor, $borderColor) {
+  @include linear-gradient(lighten($gradientColor, 8), $gradientColor);
+  border: 1px solid $borderColor;
+  .fa::before{
+    padding: 5px 12px 5px 0px;
+    border-right: 1px solid $borderColor;
+    position: relative;
+    left: -12px;
+    top: 1px;
+    vertical-align: text-top;
+  }
+  span{
+    padding-left:3px;
+  }
+  &:hover{
+    @include linear-gradient(lighten($gradientColor,10), darken($gradientColor, 8));
+  }
+}
+
+.btn--facebook { @include btnSocial($facebook-blue, $navy-blue); }
+.btn--gplus { @include btnSocial($gplus-red, $granate); }
+.btn--twitter { @include btnSocial($twitter-blue, $capota-blue); }
+
 // ----- Sizes ----- //
+
+// Small
+
+.btn--xs {
+  @extend %btn;
+  font-size: .7em;
+  padding: .30em 1em;
+}
 
 // Small
 
