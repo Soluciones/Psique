@@ -1,7 +1,7 @@
 $menu_lvl2_height: 43px;
 
 .menu-lvl2 {
-  background: $casper;
+  background: $ceruleo-blue;
   height: $menu_lvl2_height;
   left: 0;
   list-style-type: none;
@@ -45,7 +45,7 @@ $menu_lvl2_height: 43px;
 }
 
 .menu-lvl2--current {
-  background: $matisse;
+  background: $capota-blue;
   display: inline-block;
   height: $menu_lvl2_height;
   position: absolute;
@@ -77,7 +77,7 @@ $menu_lvl2_height: 43px;
     z-index: 9999999;
   }
   span {
-    color: $casper;
+    color: $ceruleo-blue;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: bold;
