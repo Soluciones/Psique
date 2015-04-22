@@ -11,10 +11,10 @@
 
 .search {
   @include outer-container;
-  background-color: $search-background;
+  background-color: $dark-grey;
   height: 50px;
   overflow: hidden;
-  padding: .65em .85em;
+  padding: .75em .85em;
 }
 
 // -------------------------------------
@@ -25,7 +25,6 @@
 
 .search-input {
   @include span-columns(10);
-  background-color: $search-input-background;
   border: 0;
   border-radius: 0;
   color: #fff;
@@ -36,7 +35,7 @@
 // ----- Search button ----- //
 
 .search-button {
-  background-color: $search-button-background;
+  background-color: transparent;
   border: 0;
   color: #fff;
   font-size: 22px;
