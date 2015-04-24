@@ -63,6 +63,19 @@
   }
 }
 
+.menu-item.desktop {
+  background-color: $menu-sub-background;
+  border-bottom: solid 3px orange;
+
+  a {
+    font-style: italic;
+  }
+
+  i {
+    margin-right: 1em;
+  }
+}
+
 // ----- Submenu ----- //
 
 .menu-sub {
