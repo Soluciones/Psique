@@ -47,8 +47,32 @@
   > a {
     color: $menu-item-color;
     display: block;
-    padding: 1em;
+    padding: 1.1em;
     text-decoration: none;
+  }
+
+  .has-icon  {
+    display: inline-block;
+    width: 100%;
+    i {
+      border-left: solid 1px $navy-blue;
+      margin-right: -17px;
+      margin-top: -17px;
+      padding: 18.5px 25px;
+    }
+  }
+}
+
+.menu-item.desktop {
+  background-color: $menu-sub-background;
+  border-bottom: solid 3px orange;
+
+  a {
+    font-style: italic;
+  }
+
+  i {
+    margin-right: 1em;
   }
 }
 
@@ -60,7 +84,10 @@
 
   .menu-item {
     background-color: $menu-sub-background;
-    a { border-bottom-color: lighten($menu-sub-background, 10%); }
+    a {
+      border-bottom-color: lighten($menu-sub-background, 10%);
+      padding-left: 2em;
+    }
   }
 }
 
