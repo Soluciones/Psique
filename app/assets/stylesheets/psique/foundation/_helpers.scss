@@ -22,6 +22,29 @@
   top: 50%;
 }
 
+// ----- Button Properties ----- //
+// -> Add color properties to social buttons
+
+@mixin btnSocial($gradientColor, $borderColor) {
+  @include linear-gradient(lighten($gradientColor, 8), $gradientColor);
+  border: 1px solid $borderColor;
+  .fa::before{
+    padding: 5px 12px 5px 0px;
+    border-right: 1px solid $borderColor;
+    position: relative;
+    left: -12px;
+    top: 1px;
+    vertical-align: text-top;
+  }
+  span{
+    padding-left:3px;
+  }
+  &:hover{
+    @include linear-gradient(lighten($gradientColor,10), darken($gradientColor, 8));
+  }
+}
+
+
 // -------------------------------------
 //   Extends
 // -------------------------------------

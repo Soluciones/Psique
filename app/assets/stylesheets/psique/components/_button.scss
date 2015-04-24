@@ -11,7 +11,6 @@
 
 %btn {
   @include appearance(none);
-  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -45,38 +44,36 @@
 
 // ----- Hierarchy ----- //
 
-// Primary
+// Button Shapes
 
 .btn--a {
   @extend %btn;
   @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
-  border: 1px solid $capota-blue;
+  border-radius: 5px;
   &:hover{
     @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
   }
-
 }
 
 .btn--b {
   @extend %btn;
-  @include linear-gradient(lighten($vibrant-orange, 20), $vibrant-orange);
-  border: 1px solid $dark-orange;
   &:hover{
-    @include linear-gradient(lighten($vibrant-orange,10), darken($vibrant-orange, 8));
+    @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
   }
 }
 
-.btn--c {
+// Button Styles
+
+.btn--disabled {
   @extend %btn;
   background-color: $light-grey;
   border: 1px solid $mid-grey;
   color: $mid-grey;
   cursor: not-allowed;
+  border-radius: 5px;
 }
 
-// Secondary
-
-.btn--icon {
+.btn--i {
   @extend %btn;
   .fa::before{
     padding-right:4px;
@@ -87,26 +84,29 @@
   }
 }
 
-// Social
+// Button Colors
 
-@mixin btnSocial($gradientColor, $borderColor) {
-  @include linear-gradient(lighten($gradientColor, 8), $gradientColor);
-  border: 1px solid $borderColor;
-  .fa::before{
-    padding: 5px 12px 5px 0px;
-    border-right: 1px solid $borderColor;
-    position: relative;
-    left: -12px;
-    top: 1px;
-    vertical-align: text-top;
-  }
-  span{
-    padding-left:3px;
-  }
+.btn--blue {
+  @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
+  border: 1px solid $capota-blue;
   &:hover{
-    @include linear-gradient(lighten($gradientColor,10), darken($gradientColor, 8));
+    @include linear-gradient(lighten($capota-blue, 10), darken($capota-blue, 8));
+
   }
 }
+.btn--orange{
+  @include linear-gradient(lighten($vibrant-orange, 20), $vibrant-orange);
+  border: 1px solid $dark-orange;
+  &:hover{
+    @include linear-gradient(lighten($vibrant-orange,10), darken($vibrant-orange, 8));
+  }
+}
+.btn--grey{
+  background: $mid-grey;
+  color: $capota-blue;
+}
+
+// Social
 
 .btn--facebook { @include btnSocial($facebook-blue, $navy-blue); }
 .btn--gplus { @include btnSocial($gplus-red, $granate); }

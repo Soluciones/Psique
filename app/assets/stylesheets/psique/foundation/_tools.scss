@@ -13,3 +13,7 @@
   position: absolute;
   right: 0;
 }
+
+// Separate Icons from text on styleguide
+
+.icon-margin { margin-bottom: 5px; i::before { margin-right: 10px; } }
