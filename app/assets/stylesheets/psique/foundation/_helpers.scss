@@ -12,6 +12,65 @@
 // -------------------------------------
 //   Mixins
 // -------------------------------------
+@mixin box-header($bgcolor) {
+  background: $bgcolor;
+  height: $menu_lvl2_height;
+  left: 0;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+@mixin arrow-header($arrow-bgcolor, $bgcolor, $color){
+  background: $bgcolor;
+  display: inline-block;
+  height: $menu_lvl2_height;
+  position: absolute;
+  right: 0;
+  top: 0;
+  vertical-align: top;
+  width: 69%;
+  .line-divider {
+    background: white;
+    height: 100%;
+    i {
+      color:white;
+      height: 100%;
+      padding: 15px 17px;
+    }
+    left: -35px;
+    position: absolute;
+    width: 1px;
+    z-index: 99999999;
+  }
+  &::before {
+    border-bottom: 21px solid transparent;
+    border-left: 15px solid $arrow-bgcolor;
+    border-top: 21px solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 9999999;
+  }
+  span {
+    color: $color;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: bold;
+    left: 15%;
+    position: relative;
+    top: 30%;
+
+    a, a:visited {
+      color: white;
+    }
+  }
+}
 
 // ----- Vertical align ----- //
 // -> Centering an element in the middle
