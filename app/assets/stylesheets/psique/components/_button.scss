@@ -11,6 +11,7 @@
 
 %btn {
   @include appearance(none);
+  border: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -104,6 +105,14 @@
 .btn--grey{
   background: $mid-grey;
   color: $capota-blue;
+}
+.btn--granate {
+  @extend %btn;
+  @include linear-gradient(lighten($granate, 10), $granate);
+  border-radius: 5px;
+  &:hover{
+    @include linear-gradient(lighten($granate, 5), darken($granate, 8));
+  }
 }
 
 // Social
