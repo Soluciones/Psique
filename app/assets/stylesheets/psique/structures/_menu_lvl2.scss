@@ -1,16 +1,7 @@
 $menu_lvl2_height: 43px;
 
 .menu-lvl2 {
-  background: $ceruleo-blue;
-  height: $menu_lvl2_height;
-  left: 0;
-  list-style-type: none;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  z-index: 99999999;
+  @include box-header($ceruleo-blue)
 }
 
 .menu-options-lvl2 {
@@ -45,50 +36,7 @@ $menu_lvl2_height: 43px;
 }
 
 .menu-lvl2--current {
-  background: $capota-blue;
-  display: inline-block;
-  height: $menu_lvl2_height;
-  position: absolute;
-  right: 0;
-  top: 0;
-  vertical-align: top;
-  width: 69%;
-  .line-divider {
-    background: white;
-    height: 100%;
-    i {
-      color:white;
-      height: 100%;
-      padding: 15px 17px;
-    }
-    left: -35px;
-    position: absolute;
-    width: 1px;
-    z-index: 99999999;
-  }
-  &::before {
-    border-bottom: 21px solid transparent;
-    border-left: 15px solid $ceruleo-blue;
-    border-top: 21px solid transparent;
-    content: '';
-    height: 0;
-    position: absolute;
-    width: 0;
-    z-index: 9999999;
-  }
-  span {
-    color: $ceruleo-blue;
-    font-family: 'Roboto';
-    font-style: italic;
-    font-weight: bold;
-    left: 15%;
-    position: relative;
-    top: 30%;
-
-    a, a:visited {
-      color: white;
-    }
-  }
+  @include arrow-header($ceruleo-blue, $capota-blue, $ceruleo-blue);
 }
 
 .menu--display {

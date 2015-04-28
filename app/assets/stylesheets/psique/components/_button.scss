@@ -11,6 +11,7 @@
 
 %btn {
   @include appearance(none);
+  border: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -106,6 +107,14 @@
   color: $capota-blue;
   &:hover{
     @include background(darken($mid-grey,10));
+  }
+}
+.btn--granate {
+  @extend %btn;
+  @include linear-gradient(lighten($granate, 10), $granate);
+  border-radius: 5px;
+  &:hover{
+    @include linear-gradient(lighten($granate, 5), darken($granate, 8));
   }
 }
 

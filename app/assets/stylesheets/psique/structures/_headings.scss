@@ -1,0 +1,14 @@
+.box-header {
+  @include box-header($capota-blue);
+  margin: 0 -1em 1em -1em;
+  position: relative;
+  width: initial;
+}
+
+.arrow-header {
+  @include arrow-header($capota-blue, $mid-grey, black);
+
+  span {
+    font-style: normal;
+  }
+}
