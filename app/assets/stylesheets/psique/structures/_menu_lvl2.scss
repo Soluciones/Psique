@@ -1,7 +1,8 @@
 $menu_lvl2_height: 43px;
 
 .menu-lvl2 {
-  @include box-header($ceruleo-blue)
+  @include box-header($ceruleo-blue);
+  z-index: 1;
 }
 
 .menu-options-lvl2 {
