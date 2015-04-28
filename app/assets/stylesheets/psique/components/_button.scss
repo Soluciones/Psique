@@ -104,6 +104,9 @@
 .btn--grey{
   background: $mid-grey;
   color: $capota-blue;
+  &:hover{
+    @include background(darken($mid-grey,10));
+  }
 }
 
 // Social
@@ -119,7 +122,7 @@
 .btn--xs {
   @extend %btn;
   font-size: .7em;
-  padding: .30em 1em;
+  padding: .45em 1.7em;
 }
 
 // Small
