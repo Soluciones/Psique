@@ -11,6 +11,12 @@
 
 // ----- Palette Vars ----- //
 
+
+// Base colors
+
+$black: #000;
+$white: #fff; 
+
 // Main Colors
 
 $ceruleo-blue: #afc6d4;
@@ -19,7 +25,9 @@ $navy-blue: #0e4567;
 
 $light-grey: #f1f1f1;
 $mid-grey: #d5d5d5;
+$aux-grey: #a1a1a1;
 $dark-grey: #3e3e3e;
+
 
 $vibrant-orange: #fa4a00;
 $dark-orange: #DB5322;
@@ -48,6 +56,7 @@ $gplus-red: #D50F0F;
 
 .light-grey { background-color: $light-grey; }
 .mid-grey { background-color: $mid-grey;}
+.aux-grey { background-color: $aux-grey; }
 .dark-grey { background-color: $dark-grey; }
 
 .vibrant-orange { background-color: $vibrant-orange; }
