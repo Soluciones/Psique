@@ -1,4 +1,4 @@
-document.querySelector('.menu-item[data-submenu]').addEventListener 'touchstart', (event) ->
+$('.menu-item[data-submenu]').on 'touchstart', (event) ->
   if (icon = event.target).matches('i')
     event.preventDefault()
     submenu = this.querySelector(this.dataset.submenu)
