@@ -6,8 +6,7 @@
     = ui_element('search_box', options: options[:searcher])
 
   %ul.menu.menu--side
-    %li.menu-item.desktop
-      = link_to desktop[:url] do
-        = fa_icon 'desktop'
-        = desktop[:name]
+    - if options[:switch]
+      = ui_element('switch_btn', options: options[:switch])
+
     = render partial: 'psique/elements/navigation/item', collection: options[:items]
