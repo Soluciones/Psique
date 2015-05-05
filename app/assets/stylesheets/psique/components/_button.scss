@@ -30,6 +30,7 @@
 .btn-menu {
   background: none;
   border: 0;
+  padding: 0;
 
   &:focus { outline: 0; }
 
@@ -49,17 +50,23 @@
 
 .btn--a {
   @extend %btn;
-  @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
+
+  @include linear-gradient(lighten($c-primary, 20), $c-primary);
   border-radius: 5px;
-  &:hover{
-    @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
+
+  &:hover {
+    @include linear-gradient(lighten($c-primary, 10), darken($c-primary, 8));
   }
 }
 
 .btn--b {
   @extend %btn;
-  &:hover{
-    @include linear-gradient(lighten($capota-blue,10), darken($capota-blue, 8));
+
+  @include linear-gradient(lighten($c-secondary, 20), $c-secondary);
+  border-radius: 5px;
+
+  &:hover {
+    @include linear-gradient(lighten($c-secondary, 10), darken($c-secondary, 8));
   }
 }
 
@@ -67,9 +74,9 @@
 
 .btn--disabled {
   @extend %btn;
-  background-color: $light-grey;
-  border: 1px solid $mid-grey;
-  color: $mid-grey;
+  background-color: $c-warning;
+  border: 1px solid $c-border;
+  color: $c-border;
   cursor: not-allowed;
   border-radius: 5px;
 }
@@ -85,44 +92,6 @@
   }
 }
 
-// Button Colors
-
-.btn--blue {
-  @include linear-gradient(lighten($capota-blue, 20), $capota-blue);
-  border: 1px solid $capota-blue;
-  &:hover{
-    @include linear-gradient(lighten($capota-blue, 10), darken($capota-blue, 8));
-
-  }
-}
-.btn--orange{
-  @include linear-gradient(lighten($vibrant-orange, 20), $vibrant-orange);
-  border: 1px solid $dark-orange;
-  &:hover{
-    @include linear-gradient(lighten($vibrant-orange,10), darken($vibrant-orange, 8));
-  }
-}
-.btn--grey{
-  background: $mid-grey;
-  color: $capota-blue;
-  &:hover{
-    @include background(darken($mid-grey,10));
-  }
-}
-.btn--granate {
-  @extend %btn;
-  @include linear-gradient(lighten($granate, 10), $granate);
-  border-radius: 5px;
-  &:hover{
-    @include linear-gradient(lighten($granate, 5), darken($granate, 8));
-  }
-}
-
-// Social
-
-.btn--facebook { @include btnSocial($facebook-blue, $navy-blue); }
-.btn--gplus { @include btnSocial($gplus-red, $granate); }
-.btn--twitter { @include btnSocial($twitter-blue, $capota-blue); }
 
 // ----- Sizes ----- //
 

@@ -1,99 +1,59 @@
 // *************************************
 //
 //   Config
-//   -> Fonts, Variables
+//   -> Fonts, variables, colors...
 //
 // *************************************
 
 // -------------------------------------
-//   Colors
+//   Base
 // -------------------------------------
 
-// ----- Palette Vars ----- //
+// ----- Palette ----- //
 
+$black: #000 !default;
+$white: #fff !default;
+$emerald: #53c595 !default;
+$steelblue: #5791bd !default;
+$koromiko: #ffc06b !default;
+$atomic: #ff956b !default;
+$downriver: #0d3756 !default;
 
-// Base colors
+// ----- Brand ----- //
 
-$black: #000;
-$white: #fff; 
+$c-primary: $emerald !default;
+$c-secondary: $downriver !default;
+$c-alert: $atomic !default;
+$c-success: $emerald !default;
+$c-warning: $koromiko !default;
+$c-info: $steelblue !default;
 
-// Main Colors
+// ----- Foundation ----- //
 
-$ceruleo-blue: #afc6d4;
-$capota-blue: #21689d;
-$navy-blue: #0e4567;
+$c-background: $white  !default;
+$c-border: darken($white, 10%) !default;
+$c-highlight: darken($c-info, 10%) !default;
+$c-subdue: $c-info !default;
+$c-text-invert: $white !default;
+$c-text: $black !default;
 
-$light-grey: #f1f1f1;
-$mid-grey: #d5d5d5;
-$aux-grey: #a1a1a1;
-$dark-grey: #3e3e3e;
+// ----- Borders & Box Shadow ----- //
 
+// ----- Typography ----- //
 
-$vibrant-orange: #fa4a00;
-$dark-orange: #DB5322;
+// ----- Sizing ----- //
 
-// Secondary Colors
+// -------------------------------------
+//   Components
+// -------------------------------------
 
-$granate: #B33135;
-$oceanic-green: #159775;
-$dark-magenta: #AA4992;
-$wisteria-blue: #486197;
+// ----- Button ----- //
 
-// Social Colors
+$btn-menu-color: $c-primary;
 
-$twitter-blue: #4099FF;
-$facebook-blue: #3D62B3;
-$gplus-red: #D50F0F;
+// ----- Panel ----- //
 
-
-// ----- Palette Classes ----- //
-
-// Background Main Shapes
-
-.ceruleo { background-color: $ceruleo-blue; }
-.capota-blue { background-color: $capota-blue; }
-.navy-blue { background-color: $navy-blue; }
-
-.light-grey { background-color: $light-grey; }
-.mid-grey { background-color: $mid-grey;}
-.aux-grey { background-color: $aux-grey; }
-.dark-grey { background-color: $dark-grey; }
-
-.vibrant-orange { background-color: $vibrant-orange; }
-.dark-orange { background-color: $dark-orange; }
-
-// Background Secondary Shapes
-
-.grana { background-color: $granate; }
-.oceanic { background-color: $oceanic-green; }
-.dark-magenta { background-color: $dark-magenta; }
-.wisteria { background-color: $wisteria-blue; }
-
-
-// ----- Structures ----- //
-
-// Offcanvas
-
-$offcanvas-menu-background: $capota-blue;
-$offcanvas-page-background: #fff;
-
-// Menu
-
-$menu--side-background: $capota-blue;
-$menu-sub-background: #4e4e4e;
-$menu-item-color: #fff;
-
-// Search
-
-$search-background: #2e2e2e;
-$search-input-background: #4e4e4e;
-$search-button-background: #2e2e2e;
-
-// ----- Components ----- //
-
-// Button menu toggle
-
-$btn-menu-color: $capota-blue;
+$panel-header-background: $c-info;
 
 // -------------------------------------
 //   Structures
@@ -101,4 +61,18 @@ $btn-menu-color: $capota-blue;
 
 // ----- Offcanvas ----- //
 
+$offcanvas-menu-background: $c-alert;
+$offcanvas-page-background: #fff;
 $offcanvas-width: em(260px);
+
+// ----- Menu ----- //
+
+$menu--side-background: $c-alert;
+$menu-sub-background: #4e4e4e;
+$menu-item-color: #fff;
+
+// ----- Search ----- //
+
+$search-background: #2e2e2e;
+$search-input-background: #4e4e4e;
+$search-button-background: #2e2e2e;
