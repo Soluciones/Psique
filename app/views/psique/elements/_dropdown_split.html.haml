@@ -1,0 +1,8 @@
+= link_to options[:url], class: "btn btn--split #{options[:class]}" do
+  = options[:name]
+  = fa_icon 'caret-down', data: { dropdown: "##{options[:id]}" }, class: 'btn--split-icon'
+
+%ul.dropdown{ id: options[:id], role: 'menu' }
+  - options[:items].each do |item|
+    %li{ role: 'presentation' }
+      = link_to item[:name], item[:url], role: 'menuitem', class: 'dropdown-item'

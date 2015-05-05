@@ -1,0 +1,10 @@
+.dropdown.dropdown--group
+  = link_to options[:name], options[:url], options[:options]
+
+  %button.dropdown-toggle{ (options[:options]) }
+    = fa_icon 'caret-down'
+
+  %ul.dropdown-menu{ role: 'menu' }
+    - options[:items].each do |item|
+      %li{ role: 'presentation' }
+        = link_to item[:name], item[:url], role: 'menuitem'

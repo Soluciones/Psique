@@ -11,18 +11,38 @@
 
 %btn {
   @include appearance(none);
-  border: none;
-  color: #fff;
+  border: 0;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
   font-weight: 600;
-  line-height: 1;
-  padding: .5em 1.5em;
+  height: $btn-base-size;
+  line-height: $btn-base-size;
+  padding: 0 1.5em;
   text-decoration: none;
   user-select: none;
-  vertical-align: middle;
   white-space: nowrap;
+}
+
+.btn {
+  @extend %btn;
+}
+
+.btn--split {
+  padding-right: 4em;
+  position: relative;
+}
+
+.btn--split-icon {
+  border-left: $btn--split-border;
+  display: block;
+  height: 100%;
+  line-height: $btn-base-size;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 // ----- Button menu toggle ----- //

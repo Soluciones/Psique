@@ -1,0 +1,7 @@
+.navbar
+  - if options[:dropdown]
+    .has-dropdown= ui_element('dropdown_split', options: options[:dropdown])
+
+  - if options[:title]
+    .navbar-title
+      %p= options[:title]

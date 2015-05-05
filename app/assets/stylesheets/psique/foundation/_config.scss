@@ -34,8 +34,8 @@ $c-info: $steelblue !default;
 
 // ----- Foundation ----- //
 
-$c-background: $white  !default;
-$c-border: darken($white, 10%) !default;
+$c-background: $white !default;
+$c-border: rgba($black, .20) !default;
 $c-highlight: darken($c-info, 10%) !default;
 $c-subdue: $c-info !default;
 $c-text-invert: $white !default;
@@ -53,11 +53,19 @@ $c-text: $black !default;
 
 // ----- Button ----- //
 
-$btn-menu-color: $c-primary;
+$btn-menu-color: $c-primary !default;
+$btn-base-size: rem(40px) !default;
+$btn--split-border: 1px solid $c-border !default;
 
 // ----- Panel ----- //
 
-$panel-header-background: $c-info;
+$panel-header-background: $c-info !default;
+
+// ----- Dropdown ----- //
+
+$dropdown-border-top: 1px solid $c-border !default;
+$dropdown-bg-color: $c-primary !default;
+$dropdown-item-color: $c-text-invert !default;
 
 // ----- List-item ----- //
 
@@ -74,24 +82,30 @@ $list-item-detail-color: $black !default;
 
 // ----- Mobile ----- //
 
-$mobile-main-padding: 0.5rem !default;
+$mobile-main-padding: .5rem !default;
 
 // ----- Offcanvas ----- //
 
-$offcanvas-menu-background: $c-alert;
-$offcanvas-page-background: #fff;
-$offcanvas-width: em(260px);
+$offcanvas-menu-background: $c-alert !default;
+$offcanvas-page-background: #fff !default;
+$offcanvas-width: em(260px) !default;
 
 // ----- Menu ----- //
 
-$menu--side-background: $c-alert;
-$menu-sub-background: #4e4e4e;
-$menu-item-color: #fff;
+$menu--side-background: $c-alert !default;
+$menu-sub-background: #4e4e4e !default;
+$menu-item-color: #fff !default;
 
 // ----- Search ----- //
 
-$search-background: #2e2e2e;
-$search-input-background: #4e4e4e;
-$search-button-background: #2e2e2e;
-$search-border: 1px solid $c-border;
-$search-button-color: $c-primary;
+$search-background: #2e2e2e !default;
+$search-input-background: #4e4e4e !default;
+$search-button-background: #2e2e2e !default;
+$search-border: 1px solid $c-border !default;
+$search-button-color: $c-primary !default;
+
+// ----- Navbar ----- //
+
+$navbar-background: $c-secondary !default;
+$navbar-height: rem(35px) !default;
+$navbar-title-text-color: $white !default;

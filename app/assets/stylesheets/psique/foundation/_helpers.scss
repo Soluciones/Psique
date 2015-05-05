@@ -14,7 +14,7 @@
 // -------------------------------------
 @mixin box-header($bgcolor) {
   background: $bgcolor;
-  height: $menu_lvl2_height;
+  height: $navbar-height;
   left: 0;
   list-style-type: none;
   margin-left: auto;
@@ -28,7 +28,7 @@
 @mixin arrow-header($arrow-bgcolor, $bgcolor, $color){
   background: $bgcolor;
   display: inline-block;
-  height: $menu_lvl2_height;
+  height: $navbar-height;
   position: absolute;
   right: 0;
   top: 0;
