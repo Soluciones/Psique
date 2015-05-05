@@ -1,7 +1,7 @@
 $menu_lvl2_height: 43px;
 
 .menu-lvl2 {
-  @include box-header($ceruleo-blue);
+  @include box-header($c-info);
   z-index: 1;
 }
 
@@ -37,7 +37,7 @@ $menu_lvl2_height: 43px;
 }
 
 .menu-lvl2--current {
-  @include arrow-header($ceruleo-blue, $capota-blue, $ceruleo-blue);
+  @include arrow-header($c-info, $c-secondary, $c-info);
 }
 
 .menu--display {
