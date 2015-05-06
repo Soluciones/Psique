@@ -1,0 +1,9 @@
+%article.list-item
+  .list-item-title{ id: options[:id] }
+    %h2= link_to(options[:name], options[:url])
+    .list-item-comments
+      = fa_icon 'comment'
+      = number_with_delimiter(options[:comments])
+
+  - if options[:detail]
+    .list-item-detail= link_to options[:detail][:name], options[:detail][:url]
