@@ -1,4 +1,8 @@
-= form_tag(options[:url], class: 'search', method: :get) do
-  = search_field_tag 'q', nil, class: 'form-input search-input', placeholder: 'Buscar...'
+= form_tag(options[:url], class: options[:class], method: options[:method] || :get) do
+  = search_field_tag 'q', nil, class: 'form-input search-input', placeholder: options[:placeholder] || 'Buscar...'
+  - if options[:cse]
+    = hidden_field_tag 'cx', options[:cse][:cx]
+    = hidden_field_tag 'cof', options[:cse][:cof]
+    = hidden_field_tag 'site', options[:cse][:site]
   = button_tag '', class: 'search-button poar' do
-    = fa_icon 'search', class: 'icon'
+    = fa_icon 'search'
