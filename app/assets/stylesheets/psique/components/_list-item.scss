@@ -27,14 +27,14 @@
     color: $list-item-title-color;
     font-size: $list-item-title-size;
     font-weight: 600;
+    margin-right: 0.5rem;
   }
 }
 
 .list-item-comments {
   color: $list-item-comments-color;
-  display: inline;
+  display: inline-block;
   font-size: 1rem;
-  margin-left: 1rem;
   .fa { color: $list-item-comments-icon-color; }
 }
 
