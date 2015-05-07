@@ -1,0 +1,43 @@
+// *************************************
+//
+//   List item
+//   -> Styles for a list item
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.list-item {
+  border-bottom: $list-item-border-bottom;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  a { text-decoration: none; }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.list-item-title {
+  margin-bottom: 0.5rem;
+  h2 { display: inline; }
+  a {
+    color: $list-item-title-color;
+    font-size: $list-item-title-size;
+    font-weight: 600;
+  }
+}
+
+.list-item-comments {
+  color: $list-item-comments-color;
+  display: inline;
+  font-size: 1rem;
+  margin-left: 1rem;
+  .fa { color: $list-item-comments-icon-color; }
+}
+
+.list-item-detail > * {
+  color: $list-item-detail-color;
+}

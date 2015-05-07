@@ -55,6 +55,15 @@ $btn-menu-color: $c-primary;
 
 $panel-header-background: $c-info;
 
+// ----- List-item ----- //
+
+$list-item-border-bottom: 1px solid $black !default;
+$list-item-title-color: $c-primary !default;
+$list-item-title-size: 1.3rem !default;
+$list-item-comments-color: $c-text !default;
+$list-item-comments-icon-color: $c-primary !default;
+$list-item-detail-color: $black !default;
+
 // -------------------------------------
 //   Structures
 // -------------------------------------
