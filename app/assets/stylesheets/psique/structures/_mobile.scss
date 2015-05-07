@@ -1,0 +1,25 @@
+// *************************************
+//
+//   Mobile
+//   -> Styles to mobile structure
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.mobile {
+  overflow-x: hidden;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Mobile main container ----- //
+
+.mobile-main {
+  margin-top: $header-height;
+  padding: $mobile-main-padding;
+}
