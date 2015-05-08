@@ -34,24 +34,59 @@
 // -------------------------------------
 
 .title {
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid $mid-grey;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 1.5em;
   margin-top: 2em;
+  padding-bottom: .3em;
 }
 
-pre {
-  background-color: #272822;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 85%;
-  line-height: 1.45;
-  overflow: auto;
-  padding: 1em;
+.title-components {
+  color: $steelblue;
+  font-size: .9em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .main {
   margin-bottom: 2em;
 }
 
+.paragraph {
+  font-size: .9em;
+}
+
+.color-card {
+  @include span-columns (2);  
+
+  .color-block {
+    border-radius: 5px;
+    font-size: .9em;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .color-variable {
+    background: $light-grey;
+    border: 1px solid $mid-grey;
+    border-radius: 4px;
+    font-size: .7em;
+    padding: 4px;
+    text-align: center;
+  }
+}
+
+pre {
+  background-color: #272822;
+  border-radius: 5px;
+  color: $white;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 1em;
+}
+ 
 a {
   color: $c-secondary;
 }

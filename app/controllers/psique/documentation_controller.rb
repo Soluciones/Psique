@@ -5,7 +5,7 @@ module Psique
     def index
     end
 
-    def elements
+    def verema_colors
     end
   end
 end

@@ -1,0 +1,34 @@
+.main.grid
+  %h2.title Verema Palette
+  %p.main.paragraph This is the primary and secondary colour palettes as described in the PSD styleguide
+
+.main.grid 
+  .title-components.main Grey Palette
+  
+  - grey_palette = { '$ligth-grey' => ['#f1f1f1', 'black'], '$mid-grey' => ['#d5d5d5','black'], '$aux-grey' => ['#888', 'white'], '$dark-grey' => ['#3e3e3e', 'white'] }
+
+  - grey_palette.each do | key, color |
+    .color-card
+      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+        %span= color[0]
+      %p.color-variable= key
+
+  .grid.main
+  .title-components.main Primary Palette
+  - primary_palette = { '$maroon-flush' => ['#a72744', 'white'], '$darktan' => ['#710e1e', 'white'], '$calypso' => ['#266076', 'white'] }
+
+  - primary_palette.each do | key, color |
+    .color-card
+      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+        %span= color[0]
+      %p.color-variable= key
+
+  .grid.main
+  .title-components.main Secondary Palette
+  - secondary_palette = { '$givry' => ['#f4d4ad', 'white'], '$palma' => ['#12af0c', 'white'] }
+
+  - secondary_palette.each do | key, color |
+    .color-card
+      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+        %span= color[0]
+      %p.color-variable= key
