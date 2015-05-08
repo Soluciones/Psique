@@ -12,7 +12,7 @@
 .navbar {
   @include display(flex);
   @include align-items(center);
-  background-color: $navbar-background;
+  background-color: $navbar-title-background;
   height: $navbar-height;
 }
 
@@ -38,7 +38,12 @@
 // -------------------------------------
 
 .has-dropdown {
-  .dropdown { background-color: $navbar-background; }
+  background-color: $navbar-background;
+
+  .dropdown {
+    background-color: $navbar-background;
+    z-index: 1;
+  }
 
   > .btn {
     border-radius: 0;
