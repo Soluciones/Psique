@@ -1,0 +1,14 @@
+.main.grid
+  %h2.title Icon Font
+  %p.main.paragraph Change this text to properly addapt with context
+
+.main.grid 
+  .title-components.main Icon Font Generic
+
+  - icon_blocks = %w(fa-bars fa-home fa-angle-double-right fa-angle-double-left fa-square-o fa-play fa-pause fa-chevron-left fa-chevron-right fa-desktop fa-caret-up fa-caret-down fa-dashcube fa-envelope fa-comment fa-comments-o fa-exclamation-triangle fa-eye fa-envelope fa-picture-o fa-inbox fa-info-circle fa-pencil fa-reply fa-search fa-stop fa-tags fa-thumb-tack fa-trash-o fa-user fa-thumbs-o-up fa-star fa-pencil-square-o)
+
+  - icon_blocks.each do |class_name|
+    .icon-card.main
+      .icon-block
+        %i.fa{ class: class_name }
+      %p.icon-name= class_name

@@ -45,7 +45,14 @@ $c-text: $black !default;
 
 // ----- Typography ----- //
 
+$primary-font: 'Roboto', sans-serif;
+
 // ----- Sizing ----- //
+
+$featured-text: em(22px);
+$captions-text: em(14px);
+$disclaimer-text: em(9px);
+
 
 // -------------------------------------
 //   Components

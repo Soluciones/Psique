@@ -4,9 +4,11 @@
 //   -> Tag-level settings
 //
 // *************************************
-html, html a{
+html,
+html a {
+  font-family: $primary-font;	
+  -moz-osx-font-smoothing: grayscale;	
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 // -------------------------------------
