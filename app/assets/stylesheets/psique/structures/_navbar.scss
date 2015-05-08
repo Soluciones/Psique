@@ -1,0 +1,50 @@
+// *************************************
+//
+//   Navbar
+//   -> Navbar structure
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.navbar {
+  @include display(flex);
+  @include align-items(center);
+  background-color: $navbar-background;
+  height: $navbar-height;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- title ----- //
+
+.navbar-title {
+  @include flex-shrink(100);
+  font-weight: bold;
+  padding-left: 1rem;
+
+  > * {
+    @include ellipsis;
+    color: $navbar-title-text-color;
+  }
+}
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.has-dropdown {
+  .dropdown { background-color: $navbar-background; }
+
+  > .btn {
+    border-radius: 0;
+    height: $navbar-height;
+    line-height: $navbar-height;
+  }
+
+  .btn--split-icon { line-height: $navbar-height; }
+}
