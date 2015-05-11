@@ -20,6 +20,6 @@
 // ----- Mobile main container ----- //
 
 .mobile-main {
-  margin-top: $header-height;
-  padding: $mobile-main-padding;
+  margin: 0 $mobile-main-padding;
+  .full-width { margin: 0 (-$mobile-main-padding); }
 }
