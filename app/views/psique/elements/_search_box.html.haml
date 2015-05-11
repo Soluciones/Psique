@@ -1,5 +1,5 @@
 = form_tag(options[:url], class: options[:class], method: options[:method] || :get) do
-  = search_field_tag 'q', nil, class: 'form-input search-input', placeholder: options[:placeholder] || 'Buscar...'
+  = search_field_tag 'q', options[:q].presence, class: 'form-input search-input', placeholder: options[:placeholder] || 'Buscar...'
   - if options[:cse]
     = hidden_field_tag 'cx', options[:cse][:cx]
     = hidden_field_tag 'cof', options[:cse][:cof]
