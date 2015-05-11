@@ -75,9 +75,10 @@ $dropdown-item-color: $c-text-invert !default;
 $list-item-border-bottom: 1px solid $black !default;
 $list-item-title-color: $c-primary !default;
 $list-item-title-size: 1.2rem !default;
-$list-item-comments-color: $c-text !default;
-$list-item-comments-icon-color: $c-primary !default;
+$list-item-meta-color: $c-text !default;
+$list-item-meta-icon-color: $c-primary !default;
 $list-item-detail-color: $black !default;
+$list-item-sticky-icon-color: $c-highlight !default;
 
 // -------------------------------------
 //   Structures

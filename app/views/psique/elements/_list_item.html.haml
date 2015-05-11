@@ -1,9 +1,12 @@
-%article.list-item
+%article.list-item{ class: ('is-sticky' if options[:sticky]) }
   .list-item-title{ id: options[:id] }
     %h2= link_to(options[:name], options[:url])
-    .list-item-comments
-      = fa_icon 'comment'
-      = number_with_delimiter(options[:comments])
+    %ul.list-item-meta
+      - if options[:author]
+        %li= fa_icon 'user', text: options[:author]
+
+      - if options[:comments]
+        %li= fa_icon 'comment', text: number_with_delimiter(options[:comments])
 
   - if options[:detail]
     .list-item-detail= link_to options[:detail][:name], options[:detail][:url]
