@@ -72,3 +72,13 @@ $code-font: Menlo, Monaco, Consolas, "Courier New", monospace !important;
   .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
   .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 }
+
+.code-coment {
+  background: $light-grey;
+  border: 1px solid $mid-grey;
+  border-radius: 4px;
+  color: $aux-grey;
+  font-family: $code-font;
+  font-size: 12px;
+  padding: 3px;
+}
