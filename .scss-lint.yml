@@ -1,3 +1,8 @@
 linters:
   QualifyingElement:
     allow_element_with_attribute: true
+  StringQuotes:
+    style: single_quotes
+  LeadingZero:
+      enabled: true
+      style: exclude_zero
