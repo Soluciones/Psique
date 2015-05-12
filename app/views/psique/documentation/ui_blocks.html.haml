@@ -1,0 +1,27 @@
+.main.grid
+  %h2.title UI Blocks
+  %p.main.paragraph Change this text to properly addapt with context
+
+.grid
+  .title-components.main Banners
+
+.main.grid
+  .element-panel
+    .panel-title Preview
+    .preview-content
+      =image_tag "http://i.imgur.com/kql4xy0.png"
+  .element-panel
+    .panel-title-code Code
+    .preview-code 
+      %pre.codehilite
+        :preserve
+        %code
+        &nbps
+          .main.grid.o
+            .title-components.main.o Action Icons
+            - icon_blocks_actions = %w(fa-reply fa-search fa-star fa-trash-o fa-play fa-pause fa-stop fa-thumbs-o-up fa-eye fa-picture-o )
+            - icon_blocks_actions.each do |class_name|
+              .icon-card.main
+                .icon-block
+                  %i.fa{ class: class_name }
+                %p.icon-name= class_name
