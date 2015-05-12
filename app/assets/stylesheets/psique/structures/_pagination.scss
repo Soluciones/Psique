@@ -1,0 +1,50 @@
+// *************************************
+//
+//   Pagination
+//   -> Pagination structure
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- pagination items ----- //
+
+.mobile-pagination-first,
+.mobile-pagination-prev,
+.mobile-pagination-current,
+.mobile-pagination-next,
+.mobile-pagination-last {
+  background-color: $mobile-pagination-background;
+  color: $mobile-pagination-color;
+  font-size: .9rem;
+  padding: .6rem .8rem;
+  text-decoration: none;
+}
+
+.mobile-pagination-current {
+  background-color: transparent;
+  color: $mobile-pagination-current-color;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.mobile-pagination-prev,
+.mobile-pagination-next {
+  .fa { margin: 0 .3rem; }
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Is disabled ----- //
+
+.is-disabled {
+  .mobile-pagination & { color: $mobile-pagination-disabled-color; }
+}
