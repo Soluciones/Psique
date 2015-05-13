@@ -1,0 +1,83 @@
+// *************************************
+//
+//   Comment
+//   -> Styles for a comment
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.comment {
+  border-bottom: $comment-border-bottom;
+  padding-bottom: 1rem;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.comment-header {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  margin-bottom: .5rem;
+}
+
+.comment-avatar {
+  margin-right: .5rem;
+  max-height: $comment-avatar-size;
+  max-width: $comment-avatar-size;
+  position: relative;
+}
+
+.comment-avatar-overlay {
+  background: rgba(0, 0, 0, .5);
+  bottom: 0;
+  color: $white;
+  padding: rem(2px);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.comment-meta {
+  @include flex-grow(1);
+  font-size: rem(15px);
+}
+
+.comment-meta-title {
+  display: block;
+  font-size: rem(16px);
+  font-weight: bold;
+
+  &::first-letter { text-transform: capitalize; }
+}
+
+.comment-meta-time {
+  display: block;
+}
+
+.comment-meta-referer-btn {
+  @include align-self(center);
+  font-size: rem(15px);
+  text-align: center;
+  .fa { color: $c-primary; display: block; }
+}
+
+.comment-actions {
+  @extend %horizontal-list;
+  @include display(flex);
+  @include justify-content(space-between);
+  margin-bottom: 0;
+  a { text-decoration: none; }
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-hightlight {
+  .comment-actions & { color: $c-alert; }
+}

@@ -1,0 +1,8 @@
+es:
+  comment:
+    on-reply: 'en respuesta a'
+    view-parent: 'Ver mensaje'
+    action:
+      like: 'Me gusta'
+      star: 'Guardar'
+      reply: 'Contestar'

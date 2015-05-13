@@ -80,6 +80,11 @@ $list-item-meta-icon-color: $c-primary !default;
 $list-item-detail-color: $black !default;
 $list-item-sticky-icon-color: $c-highlight !default;
 
+// ----- Comment ----- //
+
+$comment-border-bottom: 1px solid $c-border;
+$comment-avatar-size: rem(60px);
+
 // -------------------------------------
 //   Structures
 // -------------------------------------

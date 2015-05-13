@@ -1,0 +1,26 @@
+- referer = options[:referer] || {}
+
+%article.comment{ id: options[:id] }
+  %header.comment-header
+    .comment-avatar
+      .comment-avatar-overlay= options[:counter]
+      = image_tag options[:user][:avatar]
+    .comment-meta
+      = link_to options[:user][:name], options[:user][:url], class: 'comment-meta-title'
+      = time_tag options[:date], class: 'comment-meta-time'
+      %span.comment-meta-referer
+        = t 'comment.on-reply'
+        = link_to referer[:name], referer[:url]
+
+    = link_to referer[:parent_url], class: 'comment-meta-referer-btn' do
+      = fa_icon 'eye'
+      = t 'comment.view-parent'
+
+  %main.comment-body= options[:text]
+  %footer.comment-footer
+    - if options[:actions]
+      %ul.comment-actions
+        - options[:actions].each do |action|
+          %li
+            = link_to action[:url], class: action[:class] do
+              = fa_icon action[:icon], text: action[:name]
