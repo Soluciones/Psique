@@ -4,14 +4,14 @@
 
 // Adds the systems that shape your system
 systems({
-  Psique: {
+  psique: {
     // Dependent systems
     depends: [],
     // More images:  http://images.azk.io
-    image: {"docker": "azukiapp/ruby:2.2"},
+    image: { dockerfile: "." },
     // Steps to execute before running instances
     provision: [
-      "bundle install --path /azk/bundler",
+      "bundle install --path .bundler",
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
@@ -19,7 +19,6 @@ systems({
     wait: {"retry": 20, "timeout": 1000},
     mounts: {
       '/azk/#{manifest.dir}': path("."),
-      '/azk/bundler': persistent("bundler"),
     },
     scalable: {"default": 2},
     http: {
@@ -28,7 +27,7 @@ systems({
     envs: {
       // set instances variables
       RUBY_ENV: "development",
-      BUNDLE_APP_CONFIG: "/azk/bundler",
+      BUNDLE_APP_CONFIG: ".bundler",
     },
     export_envs: {
       // exports variables for dependent systems
@@ -39,7 +38,7 @@ systems({
   // ngrok system
   ngrok: {
     // Dependent systems
-    depends: ["Psique"],
+    depends: ["psique"],
     // More images:  http://images.azk.io
     image: {"docker": "azukiapp/ngrok:latest"},
     wait: {"retry": 20, "timeout": 1000},
