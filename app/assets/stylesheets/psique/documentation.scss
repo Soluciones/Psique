@@ -33,6 +33,45 @@
 //   Inbox
 // -------------------------------------
 
+// Panel Boxes
+
+%panel-title {
+  background: $white;
+  border: 1px solid $mid-grey;
+  border-radius: 7px 7px 0 0;
+  color: $aux-grey;
+  font-weight: 300;
+  padding: 9px 14px;
+}
+
+.element-panel {
+  width: 100%;
+
+  .panel-title {
+    @extend %panel-title;
+  }
+
+  .panel-title-code {
+    @extend %panel-title;
+    border-radius: 0;
+  }
+
+  .preview-content {
+    border-left: 1px solid $mid-grey;
+    border-right: 1px solid $mid-grey;
+    padding: 15px;
+  }
+
+  pre {
+    border-radius: 0 0 7px 7px;
+    margin: 0;
+   }
+
+  img { display: block; margin: 0 auto; }
+}
+
+// Titles
+
 .title {
   border-bottom: 1px solid $mid-grey;
   font-size: 1.8em;
@@ -95,7 +134,7 @@
   @include span-columns (2);
   background: $light-grey;
   border-radius: 4px;
-  &:hover{ background: $emerald; color: $white;}
+  &:hover { background: $emerald; color: $white;}
 
   .icon-block {
     border-radius: 5px;
@@ -123,7 +162,7 @@ pre {
   font-size: 85%;
   line-height: 1.45;
   overflow: auto;
-  padding: 1em;
+  padding: 1em 1em 2.3em;
 }
  
 a {

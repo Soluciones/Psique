@@ -3,9 +3,8 @@ $code-font: Menlo, Monaco, Consolas, "Courier New", monospace !important;
 .codehilite{
   background-color:#272822;
   border-radius:6px;
-  padding: 5px 0px;
   margin: 0 auto;
-  width: 96%;
+  width: 100%;
   code { padding: 0px 15px;}
   .hll { background-color: #49483e }
   .c { color: #75715e } /* Comment */
@@ -66,13 +65,14 @@ $code-font: Menlo, Monaco, Consolas, "Courier New", monospace !important;
   .vg { color: #f8f8f2 } /* Name.Variable.Global */
   .vi { color: #f8f8f2 } /* Name.Variable.Instance */
   .il { color: #ae81ff } /* Literal.Number.Integer.Long */
-
+  .blk { color: $white; }
   .gh { } /* Generic Heading & Diff Header */
   .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
   .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
   .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 }
 
+.tabbed { float:left; }
 .code-coment {
   background: $light-grey;
   border: 1px solid $mid-grey;
