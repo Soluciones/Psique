@@ -1,0 +1,8 @@
+en:
+  comment:
+    on-reply: 'on reply to'
+    view-parent: 'View message'
+    action:
+      like: 'Like'
+      star: 'Save'
+      reply: 'Reply'
