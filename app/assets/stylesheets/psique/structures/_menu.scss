@@ -55,11 +55,15 @@
     display: inline-block;
     width: 100%;
     i {
-      border-left: solid 1px $c-info;
       margin-right: -17px;
       margin-top: -17px;
       padding: 18.5px 25px;
     }
+  }
+
+  .has-icon--dropdown {
+    @extend .has-icon;
+    i { border-left: solid 1px $c-info; }
   }
 }
 
