@@ -1,11 +1,12 @@
-%li.menu-item{ data: { submenu: 'ul.menu.menu-sub'} }
-  - if item[:submenu]
+- if item[:submenu]
+  %li.menu-item{ data: { submenu: 'ul.menu.menu-sub' } }
     = link_to item[:url], { title: item[:title], class: 'has-icon--dropdown' } do
       = item[:name]
       = fa_icon 'angle-double-up', class: 'poar'
     %ul.menu.menu-sub{ class: ('is-active' if item[:active]) }
       = render partial: 'psique/elements/navigation/item', collection: item[:submenu]
-  - else
+- else
+  %li.menu-item
     - if item[:icon]
       = link_to item[:url], { title: item[:title], class: 'has-icon' } do
         = item[:name]
