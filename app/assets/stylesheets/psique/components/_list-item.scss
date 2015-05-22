@@ -11,7 +11,7 @@
 
 .list-item {
   border-bottom: $list-item-border-bottom;
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem;
   padding-bottom: 1rem;
   a { text-decoration: none; }
 }
@@ -21,14 +21,18 @@
 // -------------------------------------
 
 .list-item-title {
-  margin-bottom: .5rem;
-  h2 { display: inline; }
+  h2 {
+    color: $list-item-title-color;
+    display: inline-block;
+    font-size: $list-item-title-size;
+    line-height: 1.2rem;
+    margin: 0;
+  }
 
   a {
     color: $list-item-title-color;
-    font-size: $list-item-title-size;
     font-weight: 600;
-    margin-right: .5rem;
+    margin-right: 1rem;
   }
 }
 
@@ -37,6 +41,8 @@
   color: $list-item-meta-color;
   display: inline-block;
   list-style-type: none;
+
+  > li { margin-right: .5rem; }
   .fa { color: $list-item-meta-icon-color; }
 }
 
