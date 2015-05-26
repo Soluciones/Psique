@@ -1,7 +1,4 @@
-$('.menu-item[data-submenu]').on 'touchstart', (event) ->
-  if (icon = event.target).matches('i')
-    event.preventDefault()
-    submenu = this.querySelector(this.dataset.submenu)
-    icon.classList.toggle('fa-angle-double-down')
-    icon.classList.toggle('fa-angle-double-up')
-    $(submenu).slideToggle(450)
+$('.menu-item[data-submenu] .fa').on 'touchstart', (event) ->
+  event.preventDefault()
+  $menuItem = $(this).closest('.menu-item')
+  $menuItem.toggleClass('is-active')

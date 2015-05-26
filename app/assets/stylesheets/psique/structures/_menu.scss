@@ -101,4 +101,5 @@
 
 // ----- Is active ----- //
 
-.menu-sub.is-active {  display: block; }
+.is-active .menu-sub { display: block; }
+.is-active .has-icon--dropdown .fa { transform: rotateX(180deg); }
