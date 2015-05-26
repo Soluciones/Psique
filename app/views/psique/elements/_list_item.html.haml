@@ -10,3 +10,6 @@
 
   - if options[:detail]
     .list-item-detail= link_to options[:detail][:name], options[:detail][:url]
+
+  - if options[:description]
+    .list-item-description= options[:description]
