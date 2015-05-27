@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    psique (1.0.2)
+    psique (2.0.0)
       bourbon
       coffee-rails
       font-awesome-rails
