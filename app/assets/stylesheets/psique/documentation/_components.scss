@@ -1,6 +1,6 @@
 // *************************************
 //
-//   Structures
+//   Components
 //   -> Documentation’s modules and UI
 //
 // *************************************
@@ -43,7 +43,7 @@
 
   button {
     @include position(absolute, 10% .35em nil nil);
-    background: #53c597;
+    background: $ming;
     border: 0;
     font-size: .8em;
     height: 80%;
@@ -60,4 +60,55 @@
 .logo-list {
   @extend %horizontal-list;
   > li { margin-right: 2.5em; }
+}
+
+// -------------------------------------
+//   Box
+// -------------------------------------
+
+%box {
+  padding: em(10px) em(0px);
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+
+.box {
+  @extend  %box;
+}
+
+// ----- Modifiers ----- //
+
+// Sizes
+
+.box--s {
+    @include span-columns (2);
+}
+
+.box--m {
+    @include span-columns (4);
+}
+
+.box--l {
+    @include span-columns (6);
+}
+
+// Theme
+
+.box--a {
+  background: $light-grey;
+}
+
+.box--b {
+  background: $dark-grey;
+  color: $white !important;
+}
+
+// ----- States ----- //
+
+// Is clickable
+
+.box-highlight {
+  &:hover {background-color: $ming; color: $white;}
 }

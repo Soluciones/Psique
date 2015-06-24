@@ -1,14 +1,12 @@
 .welcome
   .grid
-    .col-2= image_tag('psique/documentation/shell.svg')
-
     .col-7
       %h3 Welcome to Emergia style guide
       %p
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
 
-    .col-3
+    .col-12
       %p You know you're gonna search?
       = form_tag '#', method: :get, class: 'searcher' do
         = search_field_tag 'search', nil, placeholder: 'Search for...'
