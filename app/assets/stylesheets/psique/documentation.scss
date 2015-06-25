@@ -99,10 +99,10 @@
 
 // Color pages Styles
 
-.color-card {
-  @include span-columns (2);  
+.color-box {
+  @include span-columns (2);
 
-  .color-block {
+  .color-box-preview {
     border-radius: 5px;
     font-size: .9em;
     padding: 30px;
@@ -134,7 +134,7 @@
   @include span-columns (2);
   background: $light-grey;
   border-radius: 4px;
-  &:hover { background: $emerald; color: $white;}
+  &:hover { background: $ming; color: $white;}
 
   .icon-block {
     border-radius: 5px;
@@ -164,7 +164,7 @@ pre {
   overflow: auto;
   padding: 1em 1em 2.3em;
 }
- 
+
 a {
   color: $c-secondary;
 }
