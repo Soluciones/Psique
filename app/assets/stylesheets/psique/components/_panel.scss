@@ -10,7 +10,7 @@
 // -------------------------------------
 
 .panel {
-  background-color: #f1f1f1;
+  background-color: $light-grey;
 }
 
 // -------------------------------------
@@ -21,7 +21,7 @@
 
 .panel-header {
   background-color: $panel-header-background;
-  color: complement($ming);
+  color: complement($c-primary);
   font-weight: bold;
   padding: .5rem 1rem;
   position: relative;
