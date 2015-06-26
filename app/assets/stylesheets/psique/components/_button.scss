@@ -96,19 +96,21 @@
   @extend %btn;
   background-color: $c-warning;
   border: 1px solid $c-border;
+  border-radius: 5px;
   color: $c-border;
   cursor: not-allowed;
-  border-radius: 5px;
 }
 
 .btn--i {
   @extend %btn;
-  .fa::before{
-    padding-right:4px;
+
+  .fa::before {
+    padding-right: 4px;
     vertical-align: text-top;
   }
-  span{
-    padding-left:3px;
+
+  span {
+    padding-left: 3px;
   }
 }
 

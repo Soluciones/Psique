@@ -25,7 +25,7 @@
   z-index: 0;
 }
 
-@mixin arrow-header($arrow-bgcolor, $bgcolor, $color){
+@mixin arrow-header($arrow-bgcolor, $bgcolor, $color) {
   background: $bgcolor;
   display: inline-block;
   height: $navbar-height;
@@ -34,19 +34,22 @@
   top: 0;
   vertical-align: top;
   width: 69%;
+
   .line-divider {
-    background: white;
+    background: $white;
     height: 100%;
-    i {
-      color:white;
-      height: 100%;
-      padding: 15px 17px;
-    }
     left: -35px;
     position: absolute;
     width: 1px;
     z-index: 99999999;
+
+    i {
+      color: $white;
+      height: 100%;
+      padding: 15px 17px;
+    }
   }
+
   &::before {
     border-bottom: 21px solid transparent;
     border-left: 15px solid $arrow-bgcolor;
@@ -57,6 +60,7 @@
     width: 0;
     z-index: 9999999;
   }
+
   span {
     color: $color;
     font-family: 'Roboto';
@@ -66,8 +70,9 @@
     position: relative;
     top: 30%;
 
-    a, a:visited {
-      color: white;
+    a,
+    a:visited {
+      color: $white;
     }
   }
 }
@@ -84,22 +89,25 @@
 // ----- Button Properties ----- //
 // -> Add color properties to social buttons
 
-@mixin btnSocial($gradientColor, $borderColor) {
-  @include linear-gradient(lighten($gradientColor, 8), $gradientColor);
-  border: 1px solid $borderColor;
-  .fa::before{
-    padding: 5px 12px 5px 0px;
-    border-right: 1px solid $borderColor;
-    position: relative;
+@mixin btnsocial($gradientcolor, $bordercolor) {
+  @include linear-gradient(lighten($gradientcolor, 8), $gradientcolor);
+  border: 1px solid $bordercolor;
+
+  .fa::before {
+    border-right: 1px solid $bordercolor;
     left: -12px;
+    padding: 5px 12px 5px 0;
+    position: relative;
     top: 1px;
     vertical-align: text-top;
   }
-  span{
-    padding-left:3px;
+
+  span {
+    padding-left: 3px;
   }
-  &:hover{
-    @include linear-gradient(lighten($gradientColor,10), darken($gradientColor, 8));
+
+  &:hover {
+    @include linear-gradient(lighten($gradientcolor, 10), darken($gradientcolor, 8));
   }
 }
 
