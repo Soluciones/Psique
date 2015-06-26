@@ -19,7 +19,7 @@
   margin-left: 1em;
 
   a {
-    color: #fff;
+    color: $white;
     text-decoration: none;
     &:hover { text-decoration: underline; }
   }
@@ -35,7 +35,7 @@
   [type='search'] {
     @include box-sizing(border-box);
     border: 0;
-    color: #000;
+    color: $black;
     font-size: .8em;
     padding: 1em 7em 1em 1em;
     width: 100%;
@@ -67,11 +67,11 @@
 // -------------------------------------
 
 %box {
-  padding: em(10px) em(0px);
-  text-align: center;
-  font-weight: bold;
-  text-transform: capitalize;
   border-radius: 5px;
+  font-weight: bold;
+  padding: em(10px) em(0);
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .box {
@@ -83,15 +83,15 @@
 // Sizes
 
 .box--s {
-    @include span-columns (2);
+  @include span-columns (2);
 }
 
 .box--m {
-    @include span-columns (4);
+  @include span-columns (4);
 }
 
 .box--l {
-    @include span-columns (6);
+  @include span-columns (6);
 }
 
 // Theme
@@ -111,4 +111,52 @@
 
 .box-highlight {
   &:hover {background-color: $ming; color: $white;}
+}
+
+
+// -------------------------------------
+//   Navigation
+// -------------------------------------
+
+.guide-navigation {
+  @include span-columns(2);
+  border-radius: 4px;
+  box-shadow: 0 0 1px 0 rgba(61, 61, 61, .39);
+  margin-left: 20px;
+  max-width: 180px;
+  padding: 0;
+  position: fixed;
+  
+  ul { padding: 0; }
+
+  li {
+    font-size: $captions-text;
+    font-weight: 300;
+  }
+}
+
+// ----- Content ----- //
+.nav-title {
+  border-bottom: 1px solid $mid-grey;
+  color: $c-info;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 0 0 13px 15px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.nav-options {
+  border-bottom: 1px solid $light-grey;
+  border-right: 3px solid $white;
+  padding: 12px 15px;
+
+  &:hover {
+    background-color: $light-grey;
+    border-right: 3px solid $c-primary;
+  }
+
+  &:active {
+    border-right: 3px solid $c-info;
+  }
 }
