@@ -1,7 +1,5 @@
 Psique::Engine.routes.draw do
   root to: 'documentation#index'
-  get '/ui-elements/colors/guide', to:'documentation#guide_colors'
-  get '/ui-elements/fonts', to:'documentation#font'
-  get '/ui-elements/icon-font', to:'documentation#font_awesome'
-  get '/ui-elements/blocks', to:'documentation#ui_blocks'
+  get '/design-elements', to:'documentation#design_elements'
+  get '/ui-elements', to:'documentation#ui_elements'
 end

@@ -1,0 +1,6 @@
+%ul#lat_nav.guide-navigation.unstyled
+  %li
+    %p.nav-title= @title
+    %ul.unstyled
+      - @menu_elements.each do |element|
+        %li.nav-options= element
