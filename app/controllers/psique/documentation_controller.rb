@@ -5,15 +5,14 @@ module Psique
     def index
     end
 
-    def verema_colors
-    end
-
     def design_elements
+      @page_title = 'Design Elements'
       @title = 'Design'
       @menu_elements = ['Typography', 'Icons', 'Palette Colors', 'UI Colors']
     end
 
     def ui_elements
+      @page_title = 'UI Elements'
       @title = 'UI Blocks'
       @menu_elements = ['Banners', 'Comments', 'Blogs', 'Reply Box']
     end
