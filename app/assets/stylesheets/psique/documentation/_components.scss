@@ -69,8 +69,11 @@
 %box {
   border-radius: 5px;
   box-sizing: inherit;
+  display: inline-block !important;
+  float: none !important;
   padding: em(10px) em(0);
   text-align: center;
+  vertical-align: top;
 }
 
 .box {
