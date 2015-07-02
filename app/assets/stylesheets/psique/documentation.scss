@@ -183,3 +183,24 @@ ul > li { line-height: 1.5em; }
 .unstyled {
   list-style: none;
 }
+
+
+// Palette Boxes
+
+.palette-variable {
+  border: 1px solid $mid-grey;
+  border-radius: 4px;
+  color: $dark-grey;
+  font-size: $variable-names;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+  width: 65%;
+}
+
+.palette-hex {
+  border-radius: 4px;
+  font-size: $variable-names;
+  font-weight: bold;
+  padding: em(36px);
+}

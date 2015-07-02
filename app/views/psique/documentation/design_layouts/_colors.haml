@@ -6,30 +6,30 @@
 .main.grid
   .title-components.main Grey Palette
 
-  - grey_palette = { '$ligth-grey' => ['#f1f1f1', 'black'], '$mid-grey' => ['#d5d5d5','black'], '$aux-grey' => ['#888', 'white'], '$dark-grey' => ['#3e3e3e', 'white'] }
+  - grey_palette = { '$ligth-grey' => ['#f1f1f1', '#2e2e2e'], '$mid-grey' => ['#d5d5d5','#2e2e2e'], '$aux-grey' => ['#888', 'white'], '$dark-grey' => ['#3e3e3e', 'white'] }
 
   - grey_palette.each do | key, color |
-    .color-card
-      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+    .box.box--s
+      .palette-hex{ style: "background-color: #{color[0]}; color: #{color[1]}" }
         %span= color[0]
-      %p.color-variable= key
+      %p.palette-variable= key
 
   .grid.main
   .title-components.main Primary Palette
   - primary_palette = { '$steelblue' => ['#5791bd', 'white'], '$ming' => ['#53c595', 'white'] }
 
   - primary_palette.each do | key, color |
-    .color-card
-      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+    .box.box--s
+      .palette-hex{ style: "background-color: #{color[0]}; color: #{color[1]}" }
         %span= color[0]
-      %p.color-variable= key
+      %p.palette-variable= key
 
   .grid.main
   .title-components.main Secondary Palette
-  - secondary_palette = { '$koromiko' => ['#ffc06b', 'white'], '$atomic' => ['#ff956b', 'white'], '$downriver' => ['#0d3756', 'white'] }
+  - secondary_palette = { '$koromiko' => ['#ffc06b', '#2e2e2e'], '$atomic' => ['#ff956b', '#2e2e2e'], '$downriver' => ['#0d3756', 'white'] }
 
   - secondary_palette.each do | key, color |
-    .color-card
-      .color-block{ style: "background-color: #{color[0]}; color: #{color[1]}" }
+    .box.box--s
+      .palette-hex{ style: "background-color: #{color[0]}; color: #{color[1]}" }
         %span= color[0]
-      %p.color-variable= key
+      %p.palette-variable= key
