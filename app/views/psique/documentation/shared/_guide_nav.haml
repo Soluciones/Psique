@@ -2,5 +2,5 @@
   %li
     %p.nav-title= @title
     %ul.unstyled
-      - @menu_elements.each do |element|
-        %li.nav-options= element
+      - @menu_elements.each do |element, link|
+        %li.nav-options.active= link_to element, link

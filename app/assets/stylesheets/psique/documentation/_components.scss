@@ -126,7 +126,7 @@
   max-width: 180px;
   padding: 0;
   position: fixed;
-  
+
   ul { padding: 0; }
 
   li {
@@ -150,6 +150,8 @@
   border-bottom: 1px solid $light-grey;
   border-right: 3px solid $white;
   padding: 12px 15px;
+
+  a { font-weight: 400; text-decoration: none; }
 
   &:hover {
     background-color: $light-grey;
