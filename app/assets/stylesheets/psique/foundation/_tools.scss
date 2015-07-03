@@ -15,17 +15,18 @@
 }
 
 .right-pull {
-  float: right;	
+  float: right;
 }
 
 .left-pull {
-  float: left;	
+  float: left;
 }
 
 
 // -------------------------------------
 //   Margin
 // -------------------------------------
+.blank-space { height: 1px; }
 
 .mt-1 { margin-top: 1rem; }
 .mtb-1 {
@@ -48,4 +49,3 @@
 // -------------------------------------
 
 .bt-4 { border-top: 4px solid $c-primary; }
-
