@@ -68,10 +68,12 @@
 
 %box {
   border-radius: 5px;
-  font-weight: bold;
+  box-sizing: inherit;
+  display: inline-block !important;
+  float: none !important;
   padding: em(10px) em(0);
   text-align: center;
-  text-transform: capitalize;
+  vertical-align: top;
 }
 
 .box {
