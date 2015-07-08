@@ -122,18 +122,34 @@
 
 .guide-navigation {
   @include span-columns(2);
+  @include transition(all 200ms linear);
+  background: $white;
   border-radius: 4px;
   box-shadow: 0 0 1px 0 rgba(61, 61, 61, .39);
   margin-left: 20px;
   max-width: 180px;
+  min-width: 130px;
   padding: 0;
   position: fixed;
 
+  @media screen and (max-width: $break-large) {
+    left: em(-90px);
+    margin-left: 11px;
+    max-width: 130px;
+
+    &:hover {
+      left: 7px;
+      min-width: 160px;
+    }
+  }
+
   ul { padding: 0; }
 
-  li {
+  a {
+    display: block;
     font-size: $captions-text;
     font-weight: 300;
+    padding: 12px 15px;
   }
 }
 
@@ -151,7 +167,6 @@
 .nav-options {
   border-bottom: 1px solid $light-grey;
   border-right: 3px solid $white;
-  padding: 12px 15px;
 
   a { font-weight: 400; text-decoration: none; }
 
