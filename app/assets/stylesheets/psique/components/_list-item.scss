@@ -49,19 +49,3 @@
 .list-item-detail > * {
   color: $list-item-detail-color;
 }
-
-
-// -------------------------------------
-//   States
-// -------------------------------------
-
-.list-item.is-sticky {
-
-  .list-item-title::before {
-    color: $list-item-sticky-icon-color;
-    content: '\f08d';
-    display: inline-block;
-    font-family: 'FontAwesome';
-    margin-right: .5rem;
-  }
-}
